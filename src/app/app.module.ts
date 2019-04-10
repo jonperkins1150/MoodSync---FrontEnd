@@ -15,7 +15,7 @@ import { MusicComponent } from './music/music.component';
     AppComponent,
     PlaylistsComponent,
     LoginComponent,
-    AdminportalComponent
+    AdminportalComponent,
     HomeLoggedComponent,
     HomeNotLoggedComponent,
     MusicComponent
