@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+h1{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 9em;
+    color: 	#ff5000;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 3em;
+    color: #127b8d;
+    text-align: center;
+}
+
+.bg-img{
+    background-image: url("./assets/black-and-white-close-up-earphones.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content{
+    background-color: rgba(255, 255, 255, 0.30);
+}
