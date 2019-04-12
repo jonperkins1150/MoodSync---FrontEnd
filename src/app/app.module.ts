@@ -4,10 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {
   MatToolbarModule, 
-  MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
+  MatGridList,
 } from '@angular/material';
+
+import { MatButtonModule} from '@angular/material/button';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +19,6 @@ import { AdminportalComponent } from './components/adminportal/adminportal.compo
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { HomeNotLoggedComponent } from './components/home-not-logged/home-not-logged.component';
 import { MusicComponent } from './components/music/music.component';
-import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { HeaderComponent } from './components/header/header.component';
     HomeLoggedComponent,
     HomeNotLoggedComponent,
     MusicComponent,
-    HeaderComponent
+
   ],
   imports: [
     BrowserModule,
@@ -38,6 +39,7 @@ import { HeaderComponent } from './components/header/header.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatGridList
   ],
   providers: [],
   bootstrap: [AppComponent]
