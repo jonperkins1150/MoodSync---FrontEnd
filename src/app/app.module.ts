@@ -24,6 +24,8 @@ import { RegistrationComponent} from './components/registration/registration.com
 import { HeaderComponent } from './components/header/header.component';
 import { GenreComponent } from './components/genre/genre.component';
 
+import { HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +50,7 @@ import { GenreComponent } from './components/genre/genre.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    HttpClientModule,
     
   ],
   providers: [],
