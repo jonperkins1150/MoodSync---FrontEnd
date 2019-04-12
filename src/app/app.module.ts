@@ -21,6 +21,7 @@ import { HomeLoggedComponent } from './components/home-logged/home-logged.compon
 import { HomeNotLoggedComponent } from './components/home-not-logged/home-not-logged.component';
 import { MusicComponent } from './components/music/music.component';
 import { RegistrationComponent} from './components/registration/registration.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RegistrationComponent} from './components/registration/registration.com
     MatGridList,
     RegistrationComponent,
     MatGridTile,
+    HeaderComponent,
 
   ],
   imports: [
