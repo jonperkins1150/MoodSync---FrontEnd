@@ -21,7 +21,10 @@ import { HomeLoggedComponent } from './components/home-logged/home-logged.compon
 import { HomeNotLoggedComponent } from './components/home-not-logged/home-not-logged.component';
 import { MusicComponent } from './components/music/music.component';
 import { RegistrationComponent} from './components/registration/registration.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
+import { GenreComponent } from './components/genre/genre.component';
+
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { HeaderComponent } from './header/header.component';
     RegistrationComponent,
     MatGridTile,
     HeaderComponent,
+    GenreComponent,
 
   ],
   imports: [
@@ -46,6 +50,7 @@ import { HeaderComponent } from './header/header.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    HttpClientModule,
     
   ],
   providers: [],
