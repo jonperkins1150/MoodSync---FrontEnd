@@ -10,7 +10,7 @@ export class GenreService {
 
   constructor(private http: HttpClient) { }
   getGenre(): Observable<any>{
-    return this.http.get("https://deployedMoodSync")
+    return this.http.get("https://moodsync.azurewebsites.net/")
   }
   }
 
