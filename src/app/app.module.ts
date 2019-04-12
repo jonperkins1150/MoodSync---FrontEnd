@@ -7,6 +7,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatGridList,
+  MatGridTile,
 } from '@angular/material';
 
 import { MatButtonModule} from '@angular/material/button';
@@ -19,6 +20,7 @@ import { AdminportalComponent } from './components/adminportal/adminportal.compo
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { HomeNotLoggedComponent } from './components/home-not-logged/home-not-logged.component';
 import { MusicComponent } from './components/music/music.component';
+import { RegistrationComponent} from './components/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,9 @@ import { MusicComponent } from './components/music/music.component';
     HomeLoggedComponent,
     HomeNotLoggedComponent,
     MusicComponent,
+    MatGridList,
+    RegistrationComponent,
+    MatGridTile,
 
   ],
   imports: [
@@ -39,7 +44,7 @@ import { MusicComponent } from './components/music/music.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatGridList
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

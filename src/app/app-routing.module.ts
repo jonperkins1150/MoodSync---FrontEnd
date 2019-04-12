@@ -8,10 +8,10 @@ import { RegistrationComponent } from './components/registration/registration.co
 
 const routes: Routes = [
   {path: "", component: HomeLoggedComponent},
-  {path: "music", component:MusicComponent},
-  {path: "playlists", component: PlaylistsComponent },
-  {path: "adminportal", component: AdminportalComponent },
-  {path: "registration", component: RegistrationComponent }, 
+  {path: 'music', component:MusicComponent},
+  {path: 'playlists', component: PlaylistsComponent },
+  {path: 'adminportal', component: AdminportalComponent },
+  {path: 'registration', component: RegistrationComponent }, 
 ];
 
 @NgModule({

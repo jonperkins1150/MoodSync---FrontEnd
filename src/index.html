@@ -10,55 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<header>
-<mat-toolbar>
-    <nav class="nav">                    
-      <div style="text-align:left">
-          <ul id="nav-ul">          
-            <li><a routerLink="">Home</a></li>
-            <li><a routerLink="./music">Music</a></li>
-            <li><a routerLink="./playlist">Playlists</a></li>
-            <li><a routerLink="./adminportal">Admin Portal</a></li>
-          </ul>
-        </div>
-      </nav>
-      <button mat-raised-button class="nav-btn-register"><a routerLink="/register"></a><b>Register</b></button>
-      <button mat-raised-button class="nav-btn-login"><a routerLink="/login"></a><b>Login</b></button>
-    </mat-toolbar>
-  </header>
-<body class="bg-img" id="filter">
-  
-    <div style="text-align:center">
-        <img width="500" alt="MoodSync Logo" src="../assets/logo.png">
-        </div>
-    <h1>Welcome back, Moodies!</h1>
-    <h2>How are you feeling today?</h2>
-    
-   
-    <mat-grid-list cols="4" rowHeight="5em">
-        
-            <mat-grid-tile>
-            <img class="tile-image" width="75" alt="Happy Emoji" src="./assets/happyemoji.png" />
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <img class="tile-image" width="90" alt="Sad Emoji" src="./assets/sademoji.png" />
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <img class="tile-image" width="75" alt="Angry Emoji" src="./assets/angryemoji.png" />
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <img class="tile-image" width="75" alt="Romantic Emoji" src="./assets/romanticemoji.png" />
-        </mat-grid-tile>
-      </mat-grid-list>
-    </div>
 
-    <div>
-        <button mat-raised-button class="nav-btn-existing"><a routerLink="/playlists/play"></a><b>Listen to Your Playlists</b></button>      
-        <button mat-raised-button class="nav-btn-create"><a routerLink="/playlists/create"></a><b>Create New Playlist</b></button>
-        <button mat-raised-button class="nav-btn-moodies"><a routerLink="/playlists/moodies"></a><b>Listen to Moodies Playlist</b></button>
-    </div>
+<body>
       <app-root></app-root>
-</div>
-</div>
 </body>
 </html>
