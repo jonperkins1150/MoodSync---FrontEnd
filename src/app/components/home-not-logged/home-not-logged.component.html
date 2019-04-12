@@ -1,3 +1,38 @@
-<p>
-  home-not-logged works!
-</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Pen+Script" rel="stylesheet">
+  <title>MoodSync</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<header>
+<mat-toolbar>
+    <nav class="nav">                    
+      <div style="text-align:left">
+          <ul id="nav-ul">          
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="./music">Music</a></li>
+            <li><a routerLink="./playlist">Playlists</a></li>
+            <li><a routerLink="./adminportal">Admin Portal</a></li>
+          </ul>
+        </div>
+      </nav>
+      <button mat-raised-button class="nav-btn"><a routerLink="/register"></a><b>Register</b></button>
+      <button mat-raised-button class="nav-btn"><a routerLink="/login"></a><b>Login</b></button>
+    </mat-toolbar>
+  </header>
+<body class="bg-img">
+  <div>
+    <h1>Welcome to MoodSync!</h1>
+    <h2>Please login so you can start listening to your music.</h2>
+    </div>
+      <app-root></app-root>
+</div>
+</body>
+</html>
+
