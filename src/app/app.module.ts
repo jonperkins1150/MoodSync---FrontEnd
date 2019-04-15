@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 import {
   MatToolbarModule, 
@@ -14,7 +15,6 @@ import {
 import { MatButtonModule} from '@angular/material/button';
 
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlaylistsComponent } from './components/playlists/playlists.component';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
@@ -26,6 +26,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { GenreComponent } from './components/genre/genre.component';
 
 import { HttpClientModule} from '@angular/common/http';
+
+const routes = [
+{ path: 'register', component: RegistrationComponent} 
+];
 
 @NgModule({
   declarations: [
@@ -45,7 +49,7 @@ import { HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule,
+    RouterModule.forRoot(routes), 
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
