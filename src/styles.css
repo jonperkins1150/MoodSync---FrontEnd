@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 ul#nav-ul li{
     font-family: 'Nanum Pen Script', cursive;
-    font-size: 2em;
+    font-size: 1.3em;
     display: inline;
     padding: 20px; 
     align-items: left;
@@ -9,61 +11,57 @@ ul#nav-ul li{
 
 .nav-btn-register{
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 1em;
-    margin-right: 1em;
+    font-size: 0.75em;
     color: white;  
     background-color: #003fff; 
-    margin-left: 100em;
+    padding: 20px; 
 }
 
 .nav-btn-login{
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 1em;
-    margin-right: 1em;
+    font-size: 0.75em;
     color: white;
     background-color:  #16d100;  
-    margin-left: 2em;
+    padding: 20px; 
 }
 
-.nav-btn-existing{
+.btn-existing{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1em;
     margin-right: 1em;
     color: white;
     background-color: #003fff; 
-    margin-left: 28em;
+
     
 }
 
-.nav-btn-create{
+.btn-create{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1em;
     margin-right: 1em;
     color: white;
     background-color: #16d100;  
-    margin-left: 14em;
 }
 
-.nav-btn-moodies{
+.btn-moodies{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1em;
     margin-right: 1em;
     color: white;
     background-color:#7f00b8;
-    margin-left: 14em;
 }
 
 h1{
     font-family: 'Nanum Pen Script', cursive;
-    font-size: 7em;
+    font-size: 5em;
     color: 	#ff5000;
     text-align: center;
 }
 
 h2{
     font-family: 'Nanum Pen Script', cursive;
-    font-size: 5em;
-    color: #127b8d;
+    font-size: 3em;
+    color: #064b55;
     text-align: center;
     padding-top: -70px;
 }
@@ -85,12 +83,12 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-#filter{
-    background-color: rgba(255, 255, 255, 0.50);
-   
-    
+.filter{
+    background-color: rgba(255, 255, 255, 0.40);  
+    height: 100vh;
+    width: 100vw;  
 }
+
 
 mat-grid-tile{
     margin-left: 20em;
