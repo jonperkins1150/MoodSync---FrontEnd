@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import {
   MatToolbarModule, 
@@ -43,13 +44,14 @@ import { HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    AppRoutingModule,
     HttpClientModule,
     
   ],
