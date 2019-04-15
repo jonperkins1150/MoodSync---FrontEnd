@@ -27,9 +27,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { GenreComponent } from './components/genre/genre.component';
 
 import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
 
 const routes = [
-{ path: 'register', component: RegistrationComponent }, 
+{ path: 'registration', component: RegistrationComponent }, 
+{ path: 'login', component: LoginComponent },
 { path: '**', component: RegistrationComponent },
 ];
 
@@ -46,6 +48,7 @@ const routes = [
     MatGridTile,
     HeaderComponent,
     GenreComponent,
+    LoginComponent,
 
   ],
   imports: [
