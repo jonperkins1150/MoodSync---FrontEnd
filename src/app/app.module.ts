@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import {
@@ -14,7 +15,7 @@ import {
 
 import { MatButtonModule} from '@angular/material/button';
 
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { PlaylistsComponent } from './components/playlists/playlists.component';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
@@ -25,10 +26,11 @@ import { RegistrationComponent} from './components/registration/registration.com
 import { HeaderComponent } from './components/header/header.component';
 import { GenreComponent } from './components/genre/genre.component';
 
-import { HttpClientModule} from '@angular/common/http';
+import { AuthService } from './services/auth.service';
 
 const routes = [
-{ path: 'register', component: RegistrationComponent} 
+{ path: 'register', component: RegistrationComponent }, 
+{ path: '**', component: RegistrationComponent },
 ];
 
 @NgModule({
@@ -48,8 +50,10 @@ const routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(routes), 
+    HttpClientModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
@@ -59,7 +63,9 @@ const routes = [
     HttpClientModule,
     
   ],
-  providers: [],
+  providers: [
+  AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
