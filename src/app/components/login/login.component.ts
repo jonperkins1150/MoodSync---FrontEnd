@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
       password: new FormControl
     });
   }
-onSubmit() {
-  this.authService.login(this.loginForm.value);
-}
+
+  onSubmit() {
+    this.authService.login(this.loginForm.value, (test) => console.log("Good"));
+  }
 }

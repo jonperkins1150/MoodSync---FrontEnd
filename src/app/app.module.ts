@@ -30,9 +30,10 @@ import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 
 const routes = [
-{ path: 'registration', component: RegistrationComponent }, 
-{ path: 'login', component: LoginComponent },
-{ path: '**', component: RegistrationComponent },
+  { path: 'registration', component: RegistrationComponent }, 
+  { path: 'login', component: LoginComponent },
+  { path: '**', component: RegistrationComponent },
+  { path: "", component: HomeLoggedComponent},
 ];
 
 @NgModule({
@@ -63,7 +64,6 @@ const routes = [
     MatFormFieldModule,
     MatInputModule,
     AppRoutingModule,
-    HttpClientModule,
     
   ],
   providers: [
