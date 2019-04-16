@@ -9,7 +9,9 @@ import { Genre} from '../classes/genre';
 export class SongService {
 
   constructor(private http: HttpClient) { }
-  getSong(): Observable<any>{
+  getSong(type:string, inp:string): Observable<any>{
+    let str = "?type="+type+"&"+"inp="+inp;
+    console.log(str);
     return this.http.get("https://moodsync.azurewebsites.net/api/Song")
   }
   }
