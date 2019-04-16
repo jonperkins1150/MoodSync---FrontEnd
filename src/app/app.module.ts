@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule} from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import {
   MatToolbarModule, 
@@ -13,8 +15,7 @@ import {
 
 import { MatButtonModule} from '@angular/material/button';
 
-
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { PlaylistsComponent } from './components/playlists/playlists.component';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
@@ -25,8 +26,16 @@ import { RegistrationComponent} from './components/registration/registration.com
 import { HeaderComponent } from './components/header/header.component';
 import { GenreComponent } from './components/genre/genre.component';
 
-import { HttpClientModule} from '@angular/common/http';
 import { DetailsComponent } from './components/details/details.component';
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
+
+const routes = [
+  { path: 'registration', component: RegistrationComponent }, 
+  { path: 'login', component: LoginComponent },
+  { path: '**', component: RegistrationComponent },
+  { path: "", component: HomeLoggedComponent},
+];
 
 @NgModule({
   declarations: [
@@ -42,22 +51,26 @@ import { DetailsComponent } from './components/details/details.component';
     HeaderComponent,
     GenreComponent,
     DetailsComponent,
+    LoginComponent,
 
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
-    RouterModule,
+    RouterModule.forRoot(routes), 
+    HttpClientModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
     AppRoutingModule,
-    HttpClientModule,
     
   ],
-  providers: [],
+  providers: [
+  AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
