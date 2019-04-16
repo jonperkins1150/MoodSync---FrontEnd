@@ -26,6 +26,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { GenreComponent } from './components/genre/genre.component';
 
 import { HttpClientModule} from '@angular/common/http';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HttpClientModule} from '@angular/common/http';
     MatGridTile,
     HeaderComponent,
     GenreComponent,
+    DetailsComponent,
 
   ],
   imports: [
