@@ -6,6 +6,7 @@ import { PlaylistsComponent } from './components/playlists/playlists.component';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { GenreComponent } from './components/genre/genre.component';
+import { DetailsComponent } from './components/details/details.component';
 
 const routes: Routes = [
   {path: "", component: HomeLoggedComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'playlists', component: PlaylistsComponent },
   {path: 'adminportal', component: AdminportalComponent },
   {path: 'registration', component: RegistrationComponent }, 
-  {path: 'genre', component: GenreComponent }, 
+  {path: 'genre', component: GenreComponent },
+  {path: 'details', component: DetailsComponent}, 
 ];
 
 @NgModule({
