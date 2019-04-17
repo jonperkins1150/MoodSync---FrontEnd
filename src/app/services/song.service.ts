@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Genre} from '../classes/genre';
+import { Api_Url } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,6 @@ export class SongService {
   getSong(type:string, inp:string): Observable<any>{
     let str = "?type="+type+"&"+"inp="+inp;
     console.log(str);
-    return this.http.get("https://moodsync.azurewebsites.net/api/Song")
+    return this.http.get(Api_Url)
   }
   }
