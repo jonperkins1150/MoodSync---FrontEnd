@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --prod",
-    "start": "serve -s dist/Mood-Sync-Front-End"
+    "start": "serve -s dist"
   },
   "private": true,
   "dependencies": {
