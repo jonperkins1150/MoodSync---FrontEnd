@@ -9,8 +9,8 @@ import {
   MatToolbarModule, 
   MatFormFieldModule,
   MatInputModule,
-  MatGridList,
   MatGridTile,
+  MatGridListModule,
 } from '@angular/material';
 
 import { MatButtonModule} from '@angular/material/button';
@@ -49,7 +49,6 @@ const routes = [
     HomeLoggedComponent,
     HomeNotLoggedComponent,
     SongComponent,
-    MatGridList,
     RegistrationComponent,
     MatGridTile,
     HeaderComponent,
@@ -68,6 +67,7 @@ const routes = [
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatGridListModule,
     MatInputModule,
     AppRoutingModule,
     
