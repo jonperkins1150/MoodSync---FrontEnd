@@ -9,7 +9,6 @@ import {
   MatToolbarModule, 
   MatFormFieldModule,
   MatInputModule,
-  MatGridTile,
   MatGridListModule,
 } from '@angular/material';
 
@@ -50,7 +49,6 @@ const routes = [
     HomeNotLoggedComponent,
     SongComponent,
     RegistrationComponent,
-    MatGridTile,
     HeaderComponent,
     GenreComponent,
     DetailsComponent,
