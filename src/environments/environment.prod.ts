@@ -4,6 +4,9 @@ switch(window.location.hostname){
   Api_Url += 'http://localhost:49729/';
     // Api_Url += 'https://moodsync.azurewebsites.net/';
     break;
+  case 'https://moodsync1150.herokuapp.com/':
+    Api_Url += 'https://moodsync.azurewebsites.net/';
+    break;
   default:
     Api_Url += 'http://localhost:49729/';
     break;
