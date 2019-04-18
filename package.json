@@ -1,5 +1,5 @@
 {
-  "name": "mood-sync-front-end",
+  "name": "moodsync",
   "version": "0.0.0",
   "engines" : {
     "node": "10.15.3"
@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --prod",
-    "start": "serve -s dist"
+    "start": "serve -s dist/MoodSync"
   },
   "private": true,
   "dependencies": {
