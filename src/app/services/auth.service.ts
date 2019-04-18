@@ -18,25 +18,15 @@ export class AuthService {
   }
 
   login(loginInfo): void {
-    console.log("ping?");
     const str = `grant_type=password&username=${encodeURI(loginInfo.username)}&password=${encodeURI(loginInfo.password)}`;
-    //const url = `${Api_Url}Token`;
-    // const headers = new HttpHeaders({
-    //   'Content-Type': 'application/x-www-form-urlencoded'
-    // });
     console.log(str);
     this._http.post(`${Api_Url}Token`, str).subscribe((token: Token) => {
-      console.log("pong?");
-      this.userInfo = token;
-      console.log("pang?");
-      localStorage.setItem('id_token', token.access_token);
-      this.isLoggedIn.next(true);
-      this._router.navigate(['/'])
+    this.userInfo = token;
+    localStorage.setItem('id_token', token.access_token);
+    this.isLoggedIn.next(true);
+    this._router.navigate(['/'])
     });
   }
-
-  //, { headers }  
-
 
   currentUser(): Observable<Object> {
     if (!localStorage.getItem('id_token')) { return new Observable(observer => observer.next(false)); }
