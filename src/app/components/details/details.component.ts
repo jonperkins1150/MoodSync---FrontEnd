@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SongService } from 'src/app/services/song.service';
 
 @Component({
@@ -7,11 +7,21 @@ import { SongService } from 'src/app/services/song.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
-  constructor(private sing: SongService) { }
+  @Input() dtype: string;
+  data : {}
+  tst = {asdf: "ye",
+        fdsa: "ya",
+        qwer: "yoi"
+  };
+  constructor() { }
 
   ngOnInit() {
-    this.sing.getSong("all", "1");
+    //this.dtype = "genre";
+    console.log("data: " + this.dtype);
+    
   }
 
+  doThingiesAndStuff(){
+    
+  }
 }
