@@ -1,0 +1,14 @@
+<h1>Create a Genre</h1>
+<hr>
+<form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="genreForm">
+  <div class="control-group">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Genre Name" formControlName="GenreName" type="GenreName" required />
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn button text-light" type="submit">Create Team</button>
+  <br>
+  <a mat-button routerLink="/team">Back to List</a>
+</form>
