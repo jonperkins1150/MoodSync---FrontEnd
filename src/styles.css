@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+ul#nav-ul li{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 1.3em;
+    display: inline;
+    padding: 20px; 
+    align-items: left;
+}
+
+.nav-btn-register{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 0.75em;
+    color: white;  
+    background-color: #003fff; 
+    padding: 2em; 
+}
+
+.nav-btn-login{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 0.75em;
+    color: white;
+    background-color:  #16d100;  
+    padding: 2em;
+}
+
+.btn-existing{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em;
+    margin-right: 1em;
+    color: white;
+    background-color: #003fff; 
+
+    
+}
+
+.btn-create{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em;
+    margin-right: 1em;
+    color: white;
+    background-color: #16d100;  
+}
+
+.btn-moodies{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em;
+    margin-right: 1em;
+    color: white;
+    background-color:#7f00b8;
+}
+
+h1{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 5em;
+    color: 	#ff5000;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 3em;
+    color: #064b55;
+    text-align: center;
+    padding-top: -70px;
+}
+h3{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 3em;
+    color: #7f00b8;
+    text-align: center;
+}
+
+p{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.5em; 
+    color:#7f00b8
+}
+
+.bg-img{
+    background-image: url("./assets/black-and-white-close-up-earphones.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.filter{
+    background-color: rgba(255, 255, 255, 0.40);  
+    height: 100%;    
+}
+.adminportal-links{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 2em;
+    list-style: none;
+    padding: 2em;
+}
