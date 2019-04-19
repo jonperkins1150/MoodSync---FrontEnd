@@ -13,10 +13,10 @@ genre: {}
   constructor(private data: GenreService) { }
 
   ngOnInit() {
-  //   this.retrieveGenre();
+  this.retrieveGenre();
    }
 retrieveGenre(): void{
-  this.data.getGenre().subscribe(data => {
+  this.data.getGenres().subscribe(data => {
     this.genre = data;
     console.log(this.genre);
   });

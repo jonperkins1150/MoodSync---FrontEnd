@@ -4,7 +4,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { Api_Url } from '../../environments/environment.prod';
+//import { Api_Url } from '../../environments/environment.prod';
+
+const Api_Url = 'https://moodsync.azurewebsites.net/';
 
 @Injectable()
 export class AuthService {
@@ -15,33 +17,27 @@ export class AuthService {
 
   register(regUserData: RegisterUser): Observable<any> {
     return this._http.post(`${Api_Url}api/Account/Register`, regUserData);
+    console.log("jib?");
   }
 
   login(loginInfo): void {
-    console.log("ping?");
     const str = `grant_type=password&username=${encodeURI(loginInfo.username)}&password=${encodeURI(loginInfo.password)}`;
-    //const url = `${Api_Url}Token`;
-    // const headers = new HttpHeaders({
-    //   'Content-Type': 'application/x-www-form-urlencoded'
-    // });
     console.log(str);
+    console.log(Api_Url);
     this._http.post(`${Api_Url}Token`, str).subscribe((token: Token) => {
-      console.log("pong?");
-      this.userInfo = token;
-      console.log("pang?");
-      localStorage.setItem('id_token', token.access_token);
-      this.isLoggedIn.next(true);
-      this._router.navigate(['/'])
+    this.userInfo = token;
+    localStorage.setItem('id_token', token.access_token);
+    this.isLoggedIn.next(true);
+    this._router.navigate(['/'])
     });
   }
 
-  //, { headers }  
-
-
   currentUser(): Observable<Object> {
     if (!localStorage.getItem('id_token')) { return new Observable(observer => observer.next(false)); }
+    console.log("what?");
 
     return this._http.get(`${Api_Url}api/Account/UserInfo`, { headers: this.setHeader() });
+    console.log("are?");
   }
 
   logout(): Observable<Object> {
