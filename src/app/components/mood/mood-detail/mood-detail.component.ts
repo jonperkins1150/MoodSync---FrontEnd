@@ -10,8 +10,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class MoodDetailComponent implements OnInit {
 
-  mood: MoodDetailComponent;
-  constructor(private _activatedRoute, private _moodService: MoodService) { }
+  // mood: MoodDetailComponent;
+  // constructor(private _activatedRoute, private _moodService: MoodService) { }
   ngOnInit() {
   }
 
