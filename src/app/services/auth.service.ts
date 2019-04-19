@@ -17,6 +17,7 @@ export class AuthService {
 
   register(regUserData: RegisterUser): Observable<any> {
     return this._http.post(`${Api_Url}api/Account/Register`, regUserData);
+    console.log("jib?");
   }
 
   login(loginInfo): void {
@@ -33,8 +34,10 @@ export class AuthService {
 
   currentUser(): Observable<Object> {
     if (!localStorage.getItem('id_token')) { return new Observable(observer => observer.next(false)); }
+    console.log("what?");
 
     return this._http.get(`${Api_Url}api/Account/UserInfo`, { headers: this.setHeader() });
+    console.log("are?");
   }
 
   logout(): Observable<Object> {
