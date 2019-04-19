@@ -1,4 +1,6 @@
 export class Mood{
-MoodId: number;
-MoodName: string;
+
+    MoodId: number;
+    MoodName: string;
+
 }
