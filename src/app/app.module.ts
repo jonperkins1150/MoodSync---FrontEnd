@@ -32,6 +32,13 @@ import { GenreService } from './services/genre.service';
 import { PlaylistService } from './services/playlist.service';
 import { MoodService } from './services/mood.service';
 import { SongService } from './services/song.service';
+import { create } from 'domain';
+import { GenreCreateComponent } from './components/genre/genre-create/genre-create.component';
+import { MoodCreateComponent } from './components/mood/mood-create/mood-create.component';
+import { MoodDetailComponent } from './components/mood/mood-detail/mood-detail.component';
+import { MoodDeleteComponent } from './components/mood/mood-delete/mood-delete.component';
+import { MoodEditComponent } from './components/mood/mood-edit/mood-edit.component';
+import { MoodComponent } from './components/mood/mood.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent }, 
@@ -42,17 +49,23 @@ const routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PlaylistsComponent,
     AdminportalComponent,
+    AppComponent,
+    DetailsComponent,
+    GenreComponent,
+    GenreCreateComponent,
+    HeaderComponent,
     HomeLoggedComponent,
     HomeNotLoggedComponent,
-    SongComponent,
-    RegistrationComponent,
-    HeaderComponent,
-    GenreComponent,
-    DetailsComponent,
     LoginComponent,
+    MoodComponent,
+    MoodCreateComponent,
+    MoodDeleteComponent,
+    MoodDetailComponent,
+    MoodEditComponent,
+    PlaylistsComponent,
+    RegistrationComponent,
+    SongComponent,
 
   ],
   imports: [
