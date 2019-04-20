@@ -6,10 +6,11 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import {
-  MatToolbarModule, 
   MatFormFieldModule,
-  MatInputModule,
   MatGridListModule,
+  MatInputModule,
+  MatTableModule,
+  MatToolbarModule, 
 } from '@angular/material';
 
 import { MatButtonModule} from '@angular/material/button';
@@ -68,18 +69,19 @@ const routes = [
 
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(routes), 
     HttpClientModule,
     ReactiveFormsModule,
-    MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
     MatGridListModule,
     MatInputModule,
-    AppRoutingModule,
+    MatTableModule,
+    MatToolbarModule,
     
   ],
   providers: [
