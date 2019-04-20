@@ -1,3 +1,36 @@
-<p>
- Playlists! 
-</p>
+<h1>Playlists</h1>
+<mat-grid-list cols="3" rowHeight="12em">
+    <mat-grid-tile><button mat-raised-button class="btn-existing" routerLink="/playlists"><b>Listen to Your Playlists</b></button></mat-grid-tile>       
+    <mat-grid-tile><button mat-raised-button class="btn-create" routerLink="/playlists"><b>Create New Playlist</b></button></mat-grid-tile> 
+    <mat-grid-tile><button mat-raised-button class="btn-moodies" routerLink="/playlists"><b>Listen to Moodies Playlist</b></button></mat-grid-tile> 
+</mat-grid-list>
+<hr>
+
+<div> 
+<mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+<ng-container matColumnDef="PlaylistId">
+    <mat-header-cell *matHeaderCellDef>Playlist #</mat-header-cell>
+    <mat-cell *matCellDef="let playlist">{{playlist.PlaylistId}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="UserId">
+    <mat-header-cell *matHeaderCellDef>User Id</mat-header-cell>
+    <mat-cell *matCellDef="let playlist">{{playlist.UserId}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="PlaylistName">
+    <mat-header-cell *matHeaderCellDef>Playlist Name</mat-header-cell>
+    <mat-cell *matCellDef="let playlist">{{playlist.PlaylistName}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="SongList">
+    <mat-header-cell *matHeaderCellDef>Song List</mat-header-cell>
+    <mat-cell *matCellDef="let playlist">{{playlist.SongList}}</mat-cell>
+</ng-container>
+
+</mat-table>
+
+</div>
