@@ -7,7 +7,7 @@ switch(window.location.hostname){
     Api_Url = 'https://moodsync.azurewebsites.net/';
     break;
   default:
-    Api_Url += 'https://moodsync1150.herokuapp.com/';
+    Api_Url += 'https://moodsync.azurewebsites.net/';
     break;
 }
 export const environment = {
