@@ -19,10 +19,16 @@ import { AppComponent } from './app.component';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
 import { DetailsComponent } from './components/details/details.component';
 import { GenreComponent } from './components/genre/genre.component';
+import { GenreCreateComponent } from './components/genre/genre-create/genre-create.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { HomeNotLoggedComponent } from './components/home-not-logged/home-not-logged.component';
 import { LoginComponent } from './components/login/login.component';
+import { MoodComponent } from './components/mood/mood.component';
+import { MoodCreateComponent } from './components/mood/mood-create/mood-create.component';
+import { MoodDeleteComponent } from './components/mood/mood-delete/mood-delete.component';
+import { MoodDetailComponent } from './components/mood/mood-detail/mood-detail.component';
+import { MoodEditComponent } from './components/mood/mood-edit/mood-edit.component';
 import { PlaylistsComponent } from './components/playlists/playlists.component';
 import { RegistrationComponent} from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
@@ -32,12 +38,6 @@ import { GenreService } from './services/genre.service';
 import { PlaylistService } from './services/playlist.service';
 import { MoodService } from './services/mood.service';
 import { SongService } from './services/song.service';
-import { GenreCreateComponent } from './components/genre/genre-create/genre-create.component';
-import { MoodCreateComponent } from './components/mood/mood-create/mood-create.component';
-import { MoodDetailComponent } from './components/mood/mood-detail/mood-detail.component';
-import { MoodDeleteComponent } from './components/mood/mood-delete/mood-delete.component';
-import { MoodEditComponent } from './components/mood/mood-edit/mood-edit.component';
-import { MoodComponent } from './components/mood/mood.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent }, 
