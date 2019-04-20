@@ -35,8 +35,8 @@ import { SongComponent } from './components/song/song.component';
 
 import { AuthService } from './services/auth.service';
 import { GenreService } from './services/genre.service';
-import { PlaylistService } from './services/playlist.service';
 import { MoodService } from './services/mood.service';
+import { PlaylistService } from './services/playlist.service';
 import { SongService } from './services/song.service';
 
 const routes = [
