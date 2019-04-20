@@ -4,9 +4,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-//import { Api_Url } from '../../environments/environment.prod';
+import { Api_Url } from '../../environments/environment.prod';
 
-const Api_Url = 'https://moodsync.azurewebsites.net/';
 
 @Injectable()
 export class AuthService {
