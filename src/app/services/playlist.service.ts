@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Playlist} from '../classes/playlist';
-import { Api_Url } from 'src/environments/environment.prod';
+//import { Api_Url } from 'src/environments/environment.prod';
+
+const Api_Url = 'https://moodsync.azurewebsites.net/';
 
 @Injectable({
   providedIn: 'root'
