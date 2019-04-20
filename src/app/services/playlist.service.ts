@@ -5,9 +5,8 @@ import { Playlist} from '../classes/playlist';
 import { Api_Url } from 'src/environments/environment.prod';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+
 export class PlaylistService {
 
   constructor(private _http: HttpClient) { }
