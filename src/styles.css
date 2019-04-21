@@ -84,8 +84,25 @@ p{
     background-image: url("./assets/black-and-white-close-up-earphones.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 2000px  rgba(255, 255, 255, 0.40); 
 }
+div:before {
+    content: attr(class);
+    font-size: 2em;
+    color: white;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+  }
+  
+  div:after {
+    content: '';
+    display: inline-block;
+    padding-top: 100%;
+    vertical-align: middle;
+  }
+  
+  .filter{
+    box-shadow: inset 2000px 0 0 0 rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 1);
+  }
 
 /* .filter{
     background-color: rgba(255, 255, 255, 0.40);  
