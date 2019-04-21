@@ -1,21 +1,17 @@
 <mat-toolbar>
-<nav class="nav">                    
-<div>
-<ul id="nav-ul">          
-  <li><a routerLink="">Home</a></li>
-  <li><a routerLink="/song">Songs</a></li>
-  <div class="dropdown">
-    <button class="dropbtn">Playlists <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a routerLink="/moodiesplaylists">Moodies Playlists</a></button>
-      <a routerLink="/userplaylists">Your Playlists</a>
-  <li><a routerLink="/adminportal">Admin Portal</a></li>
-</ul>
-</div>
-</nav>
-    
-<div style="position: absolute; right: 25px;">
+  <nav class="nav">                    
+    <div>
+        <ul id="nav-ul">          
+          <li><a routerLink="">Home</a></li>
+          <li><a routerLink="/song">Songs</a></li>
+          <li><a routerLink="/moodiesplaylists">Moodies Playlists</a></li>
+          <li><a routerLink="/userplaylists">Your Playlists</a></li>
+          <li><a routerLink="/adminportal">Admin Portal</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div style="position: absolute; right: 25px;">
     <button mat-raised-button class="nav-btn-register" routerLink="/registration">Register</button>
     <button mat-raised-button class="nav-btn-login" routerLink="/login">Login</button>
-</div>
-</mat-toolbar>
+  </div>
+  </mat-toolbar>
