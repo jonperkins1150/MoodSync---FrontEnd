@@ -30,10 +30,10 @@ import { MoodCreateComponent } from './components/mood/mood-create/mood-create.c
 import { MoodDeleteComponent } from './components/mood/mood-delete/mood-delete.component';
 import { MoodDetailComponent } from './components/mood/mood-detail/mood-detail.component';
 import { MoodEditComponent } from './components/mood/mood-edit/mood-edit.component';
-import { MoodiesplaylistsComponent } from './components/moodiesplaylists/moodiesplaylists.component';
+import { PlaylistComponent } from './components/playlist/playlist.component';
+import { PlaylistCreateComponent } from './components/playlist/playlist-create/playlist-create.component';
 import { RegistrationComponent} from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
-import { UserplaylistsComponent } from './components/userplaylists/userplaylists.component';
 
 import { AuthService } from './services/auth.service';
 import { GenreService } from './services/genre.service';
@@ -64,10 +64,10 @@ const routes = [
     MoodDeleteComponent,
     MoodDetailComponent,
     MoodEditComponent,
-    MoodiesplaylistsComponent,
+    PlaylistComponent,
+    PlaylistCreateComponent,
     RegistrationComponent,
     SongComponent,
-    UserplaylistsComponent,
 
   ],
   imports: [
