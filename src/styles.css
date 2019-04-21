@@ -95,8 +95,8 @@ p{
     padding-bottom: 2em;
 }
 
-mat-header-cell{
+table{
 font-family: 'Nanum Pen Script', cursive;
-    font-size: 10em;
+    font-size: 2em;
     color: #064b55;
 }
