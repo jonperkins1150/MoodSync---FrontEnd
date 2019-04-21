@@ -5,10 +5,10 @@ import { DetailsComponent } from './components/details/details.component';
 import { GenreComponent } from './components/genre/genre.component';
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { MoodComponent } from './components/mood/mood.component';
-import { MoodiesplaylistsComponent } from './components/moodiesplaylists/moodiesplaylists.component';
+import { PlaylistComponent } from './components/playlist/playlist.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
-import { UserplaylistsComponent } from './components/userplaylists/userplaylists.component';
+import { PlaylistCreateComponent } from './components/playlist/playlist-create/playlist-create.component';
 
 const routes: Routes = [
   {path: "", component: HomeLoggedComponent },
@@ -16,11 +16,11 @@ const routes: Routes = [
   {path: 'details', component: DetailsComponent }, 
   {path: 'genre', component: GenreComponent },
   {path: 'mood', component: MoodComponent }, 
-  {path: 'moodiesplaylists', component: MoodiesplaylistsComponent },
+  {path: 'playlist', component: PlaylistComponent },
+  {path: 'playlist-create', component: PlaylistCreateComponent},
   {path: 'registration', component: RegistrationComponent }, 
   {path: 'song', component:SongComponent },
-  {path: 'userplaylists', component: UserplaylistsComponent},
-];
+  ];
 
 @NgModule({
   declarations: [

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MoodiesplaylistsComponent } from './moodiesplaylists.component';
+import { PlaylistComponent } from '../playlist/playlist.component';
 
-describe('MoodiesplaylistsComponent', () => {
-  let component: MoodiesplaylistsComponent;
-  let fixture: ComponentFixture<MoodiesplaylistsComponent>;
+describe('PlaylistComponent', () => {
+  let component: PlaylistComponent;
+  let fixture: ComponentFixture<PlaylistComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoodiesplaylistsComponent ]
+      declarations: [ PlaylistComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MoodiesplaylistsComponent);
+    fixture = TestBed.createComponent(PlaylistComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,7 +1,7 @@
-<h1>Your Playlists</h1>
+<h1>Playlists</h1>
 <hr>
-<mat-grid-tile><button mat-raised-button class="btn-create" routerLink="/userplaylists"><b>Create New Playlist</b></button></mat-grid-tile> 
-<div>   
+<button mat-raised-button class="btn-create" routerLink="/playlist/playlist-create"><b>Create New Playlist</b></button>
+<div> 
 <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
@@ -28,5 +28,4 @@
 
 </mat-table>
 </div>
-  <mat-grid-tile><button mat-raised-button class="btn-moodies" routerLink="/moodiesplaylists"><b>Listen to Moodies Playlists</b></button></mat-grid-tile>        
-    
+
