@@ -1,11 +1,6 @@
-<h1>Playlists</h1>
-<mat-grid-list cols="3" rowHeight="12em">
-    <mat-grid-tile><button mat-raised-button class="btn-existing" routerLink="/playlists"><b>Listen to Your Playlists</b></button></mat-grid-tile>       
-    <mat-grid-tile><button mat-raised-button class="btn-create" routerLink="/playlists"><b>Create New Playlist</b></button></mat-grid-tile> 
-    <mat-grid-tile><button mat-raised-button class="btn-moodies" routerLink="/playlists"><b>Listen to Moodies Playlist</b></button></mat-grid-tile> 
-</mat-grid-list>
+<h1>Your Playlists</h1>
 <hr>
-
+<mat-grid-tile><button mat-raised-button class="btn-create" routerLink="/userplaylists"><b>Create New Playlist</b></button></mat-grid-tile> 
 <div> 
 <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
@@ -32,5 +27,6 @@
 </ng-container>
 
 </mat-table>
-
 </div>
+  <mat-grid-tile><button mat-raised-button class="btn-moodies" routerLink="/moodiesplaylists"><b>Listen to Moodies Playlists</b></button></mat-grid-tile>        
+    
