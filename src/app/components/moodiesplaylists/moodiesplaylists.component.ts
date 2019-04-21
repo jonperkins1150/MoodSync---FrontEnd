@@ -7,10 +7,10 @@ import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-playlists',
-  templateUrl: './playlists.component.html',
-  styleUrls: ['./playlists.component.css']
+  templateUrl: './moodiesplaylists.component.html',
+  styleUrls: ['./moodiesplaylists.component.css']
 })
-export class PlaylistsComponent implements OnInit {
+export class MoodiesplaylistsComponent implements OnInit {
   dataSource: MatTableDataSource<Playlist>;
     
     constructor(private _playlistService: PlaylistService, private _form: FormBuilder, private _router: Router) { }
