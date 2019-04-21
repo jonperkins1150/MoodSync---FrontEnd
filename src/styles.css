@@ -9,6 +9,10 @@ ul#nav-ul li{
     align-items: left;
 }
 
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
 .nav-btn-register{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 0.75em;

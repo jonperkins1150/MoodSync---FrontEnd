@@ -4,11 +4,11 @@
 <ul id="nav-ul">          
   <li><a routerLink="">Home</a></li>
   <li><a routerLink="/song">Songs</a></li>
-  <button mat-button [matMenuTriggerFor]="belowMenu">Playlists</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item><a routerLink="/moodiesplaylists">Moodies Playlists</a></button>
-    <button mat-menu-item><a routerLink="/userplaylists">Your Playlists</a></button>
-    </mat-menu>
+  <div class="dropdown">
+    <button class="dropbtn">Playlists <i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a routerLink="/moodiesplaylists">Moodies Playlists</a></button>
+      <a routerLink="/userplaylists">Your Playlists</a>
   <li><a routerLink="/adminportal">Admin Portal</a></li>
 </ul>
 </div>
