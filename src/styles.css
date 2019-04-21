@@ -30,9 +30,7 @@ ul#nav-ul li{
     font-size: 1em;
     margin-right: 1em;
     color: white;
-    background-color: #003fff; 
-
-    
+    background-color: #003fff;     
 }
 
 .btn-create{
@@ -83,13 +81,22 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .filter{
     background-color: rgba(255, 255, 255, 0.40);  
     height: 100%;    
 }
+
 .adminportal-links{
     font-family: 'Nanum Pen Script', cursive;
     font-size: 2em;
     list-style: none;
-    padding: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+mat-header-cell{
+font-family: 'Nanum Pen Script', cursive;
+    font-size: 3em;
+    color: #064b55;
 }
