@@ -52,6 +52,20 @@ ul#nav-ul li{
     color: white;
     background-color:#7f00b8;
 }
+.btn-edit{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em;
+    margin-right: 1em;
+    color: white;
+    background-color:#7f00b8; 
+}
+.btn-delete{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em;
+    margin-right: 1em;
+    color: white;
+    background-color:red;    
+}
 
 h1{
     font-family: 'Nanum Pen Script', cursive;

@@ -6,6 +6,13 @@
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
+<ng-container matColumnDef="details">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+    <mat-cell *matCellDef="let playlist" routerLink="/playlist/detail/{{playlist.PlaylistId}}">
+    <i class="material-icons">library_books</i>
+    </mat-cell>
+</ng-container>    
+
 <ng-container matColumnDef="PlaylistId">
     <mat-header-cell *matHeaderCellDef>Playlist #</mat-header-cell>
     <mat-cell *matCellDef="let playlist">{{playlist.PlaylistId}}</mat-cell>
@@ -24,6 +31,14 @@
 <ng-container matColumnDef="SongList">
     <mat-header-cell *matHeaderCellDef>Song List</mat-header-cell>
     <mat-cell *matCellDef="let playlist">{{playlist.SongList}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="buttons">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let playlist">
+        <i mat-icon-class="material-icons" routerLink="/playlist-edit/{{playlist.PlaylistId}}">Edit</i>
+        <i class="material-icons" routerLink="/playlist-delete/{{playlist.PlaylistId}}">Delete</i>
+    </mat-cell>
 </ng-container>
 
 </mat-table>

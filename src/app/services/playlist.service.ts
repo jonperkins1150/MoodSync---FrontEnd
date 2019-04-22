@@ -15,7 +15,7 @@ export class PlaylistService {
     return this._http.get(`${Api_Url}playlists`, {headers: this.getHeaders() });
   }
 
-  getPlaylistById(id: number) {
+  getPlaylistById(id: string) {
     return this._http.get(`${Api_Url}playlists/${id}`, { headers: this.getHeaders() });
   }
 
@@ -24,11 +24,11 @@ export class PlaylistService {
   }
 
   updatePlaylist(playlist: Playlist){
-    return this._http.get(`${Api_Url}playlists`, {headers: this.getHeaders() });
+    return this._http.put(`${Api_Url}playlists`, {headers: this.getHeaders() });
   }
 
   deletePlaylist(id: number) {
-    return this._http.get(`${Api_Url}playlists/${id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${Api_Url}playlists/${id}`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {
