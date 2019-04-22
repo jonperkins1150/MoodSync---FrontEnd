@@ -1,3 +1,27 @@
-<p>
-  genre-edit works!
-</p>
+<h1>Edit a Genre</h1>
+<hr>
+
+<div *ngIf="genre">
+<form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="editGenreForm">
+  <div>
+    <div hidden>
+      <mat-form-field>
+        <input matInput placeholder="GenreId" formControlName="GenreId" type="GenreId" required [value]="playlist.PlaylistId" />
+      </mat-form-field>
+    </div>
+
+    
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Genre Name" formControlName="GenreName" type="GenreName" required/>
+      </mat-form-field>
+    </div>
+
+</div>
+<button mat-raised-button class="btn-create" type="submit"><b>Create Genre</b></button>
+</form>
+</div>
+
+<div>
+<button mat-raised-button class="btn-existing" routerLink="/genre"><b>Back to Genres</b></button>
+</div>

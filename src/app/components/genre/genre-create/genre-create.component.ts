@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { GenreService } from 'src/app/services/genre.service';
+import { GenreService} from '../../../services/genre.service';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,8 +12,7 @@ export class GenreCreateComponent implements OnInit {
 
   genreForm: FormGroup;
 
-  constructor(private _genreService: GenreService, private _form: FormBuilder, private _router: Router) {
-    this.createForm();
+  constructor(private _genreService: GenreService, private _form: FormBuilder, private _router: Router) {this.createForm();
    }
 
   ngOnInit() {
@@ -22,12 +21,12 @@ export class GenreCreateComponent implements OnInit {
   createForm() {
     this.genreForm = this._form.group({
       GenreName: new FormControl
-    })
+    });
   }
-
   onSubmit() {
-    this._genreService.createGenre(this.genreForm.value).subscribe( data => {
-      this._router.navigate(['/genre']);
+    this._genreService.createGenre(this.genreForm.value).subscribe(data => {
+      this._router.navigate(['/genres']);
     })
   }
 }
+
