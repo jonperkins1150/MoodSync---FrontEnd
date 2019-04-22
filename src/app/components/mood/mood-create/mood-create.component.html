@@ -1,4 +1,5 @@
-<h1>Create a Mood.</h1>
+
+<h1>Create a Mood</h1>
 <hr>
 
 <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="moodForm">
@@ -8,8 +9,11 @@
         <input matInput placeholder="MoodName" formControlName="MoodName" type="MoodName" required/>
       </mat-form-field>
     </div>
-  </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Mood</button>
+  <div>
+ </div>
+<button mat-raised-button class="btn-create" type="submit"><b>Create Mood</b></button>
 </form>
 
-<a mat-button routerLink="/moods">Back to List</a>
+<div>
+<button mat-raised-button class="btn-existing" routerLink="/moods"><b>Back to Moods</b></button>
+</div>

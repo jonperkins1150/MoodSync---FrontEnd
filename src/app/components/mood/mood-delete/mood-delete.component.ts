@@ -8,6 +8,8 @@ import { MoodService } from 'src/app/services/mood.service';
   templateUrl: './mood-delete.component.html',
   styleUrls: ['./mood-delete.component.css']
 })
+
+
 export class MoodDeleteComponent implements OnInit {
   mood: MoodDetail;
 
@@ -20,12 +22,12 @@ export class MoodDeleteComponent implements OnInit {
     });
   }
 
-  deleteMood() {
-    console.log(this.mood.MoodId);
 
+  onDelete() {
     this._moodService.deleteMood(this.mood.MoodId).subscribe(() => {
       this._router.navigate(['/mood']);
-    })
+
+
   }
 
 }
