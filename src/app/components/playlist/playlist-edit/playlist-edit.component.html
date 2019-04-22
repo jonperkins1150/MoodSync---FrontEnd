@@ -1,7 +1,7 @@
 <h1>Edit a Playlist</h1>
 <hr>
 
-<div *ngif="playlist">
+<div *ngIf="playlist">
 <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="editPlaylistForm">
   <div>
     <div hidden>
