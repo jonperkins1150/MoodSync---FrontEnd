@@ -20,14 +20,15 @@ import { PlaylistDetailComponent } from './components/playlist/playlist-detail/p
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: "", component: HomeLoggedComponent },
-  { path: 'adminportal', component: AdminportalComponent },
+  { path: 'adminportal', canActivate: [AuthGuard] , component: AdminportalComponent },
   { path: 'details', component: DetailsComponent }, 
  
   {
-  path: 'genre', children: [
+  path: 'genre', canActivate: [AuthGuard] , children: [
     { path: '', component: GenreComponent },
     { path: 'genre-create', component: GenreCreateComponent},
     { path: 'genre-detail/:id', component: GenreDetailComponent},
@@ -36,7 +37,7 @@ const routes: Routes = [
   ]
 },
   {
-      path: 'mood', children: [
+      path: 'mood', canActivate: [AuthGuard] , children: [
         { path: '', component: MoodComponent },
         { path: 'mood-create', component: MoodCreateComponent},
         { path: 'mood-detail/:id', component: MoodDetailComponent},
@@ -45,16 +46,15 @@ const routes: Routes = [
       ]
     },
   {
-    path: 'playlist', children: [
+    path: 'playlist', canActivate: [AuthGuard] , children: [
       { path: '', component: PlaylistComponent },
       { path: 'playlist-create', component: PlaylistCreateComponent},
       { path: 'playlist-detail/:id', component: PlaylistDetailComponent},
       { path: 'playlist-edit/:id', component: PlaylistEditComponent},
       { path: 'playlist-delete/:id', component: PlaylistDeleteComponent}
     ]
-  },
-  { path: 'registration', component: RegistrationComponent }, 
-  { path: 'song', component:SongComponent }
+  }, 
+  { path: 'song', canActivate: [AuthGuard] , component:SongComponent }
   ];
 
 @NgModule({
