@@ -1,3 +1,15 @@
-<p>
-  mood-detail works!
-</p>
+<h1>Mood Details</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="moodForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="MoodName" formControlName="MoodName" type="MoodName" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Mood Details</button>
+</form>
+
+<a mat-button routerLink="/moods">Back to List</a>
