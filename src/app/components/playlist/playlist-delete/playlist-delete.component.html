@@ -1,0 +1,30 @@
+<h1>Delete Playlist</h1>
+<h2>Are you sure you want to delete the playlist?</h2>
+
+<hr>
+<div *ngIf="playlist">
+  <div>
+    <label for="">PlaylistId</label>
+    <span>{{playlist.PlaylistId}}</span>
+  </div>
+  <div>
+    <label for="">UserId</label>
+    <span>{{playlist.UserId}}</span>
+  </div>
+  <div>
+    <label for="">PlaylistName</label>
+    <span>{{playlist.PlaylistName}}</span>
+  </div>
+  <div>
+    <label for="">SongList</label>
+    <span>{{playlist.SongList}}</span>
+  </div>
+</div>
+
+<div>
+<button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete Playlist</b></button>
+</div>
+
+<div>
+<button mat-raised-button class="btn-existing" routerLink="/playlist"><b>Back to Playlists</b></button>
+</div>
