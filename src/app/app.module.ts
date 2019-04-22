@@ -46,6 +46,7 @@ import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/p
 import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
 import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
 import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent }, 
@@ -99,6 +100,7 @@ const routes = [
     
   ],
   providers: [
+  AuthGuard,
   AuthService,
   GenreService,
   MoodService,
