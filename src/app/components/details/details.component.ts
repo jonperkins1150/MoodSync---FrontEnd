@@ -32,7 +32,7 @@ export class DetailsComponent implements OnInit {
     var formTemplate = {};
     for(let r in ent){
       formTemplate[r] = new FormControl;
-      formTemplate[r].value = "yuh"
+      formTemplate[r].value = "yuh";
     }
     return formTemplate;
   }
