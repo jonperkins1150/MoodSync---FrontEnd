@@ -1,6 +1,6 @@
 export class Playlist{
     PlaylistId: number;
-    UserId: number;
+    UserId: string;
     PlaylistName: string;
     SongList: string;
 }
