@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MoodEditComponent implements OnInit {
 
-  Mood: MoodDetail;
+  mood: MoodDetail;
 
   editMoodForm: FormGroup;
   constructor(private _form: FormBuilder,
@@ -22,7 +22,7 @@ export class MoodEditComponent implements OnInit {
 
 this._ar.paramMap.subscribe(p => {
   this._moodService.getMood(p.get('id')).subscribe((singleMood: MoodDetail) => {
-    this.Mood = singleMood;
+    this.mood = singleMood;
     this.createForm();
   });
 });  
