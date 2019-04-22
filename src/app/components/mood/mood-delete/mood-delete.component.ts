@@ -27,7 +27,6 @@ export class MoodDeleteComponent implements OnInit {
     this._moodService.deleteMood(this.mood.MoodId).subscribe(() => {
       this._router.navigate(['/mood']);
 
-
+    });
   }
-
-}
+  }
