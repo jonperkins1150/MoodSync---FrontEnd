@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { MoodDetail } from 'src/app/models/MoodDetail';
-import { MoodService } from 'src/app/services/Mood.service';
+import { MoodService } from 'src/app/services/mood.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 

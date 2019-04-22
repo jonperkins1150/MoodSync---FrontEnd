@@ -13,7 +13,7 @@ export class MoodDetailComponent implements OnInit {
 
  mood: MoodDetail;
  
- constructor(private _activatedRoute, private _moodService: MoodService) { }
+ constructor(private _activatedRoute: ActivatedRoute, private _moodService: MoodService) { }
  
  ngOnInit() {
   this._activatedRoute.paramMap.subscribe(routeData => {
