@@ -6,9 +6,9 @@ import { GenreComponent } from './components/genre/genre.component';
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { MoodComponent } from './components/mood/mood.component';
 import { PlaylistComponent } from './components/playlist/playlist.component';
+import { PlaylistCreateComponent } from './components/playlist/playlist-create/playlist-create.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
-import { PlaylistCreateComponent } from './components/playlist/playlist-create/playlist-create.component';
 
 const routes: Routes = [
   {path: "", component: HomeLoggedComponent },
