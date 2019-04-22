@@ -30,30 +30,3 @@ export class MoodCreateComponent implements OnInit {
   }
 }
 
-
-
-
-export class PlaylistCreateComponent implements OnInit {
-
-  playlistForm: FormGroup;
-
-  constructor(private _playlistService: PlaylistService, private _form: FormBuilder, private _router: Router) {
-    this.createForm();
-   }
-
-  ngOnInit() {
-  }
-
-createForm(){
-  this.playlistForm = this._form.group({
-    PlaylistName: new FormControl,
-    SongList: new FormControl
-  });
-}
-
-onSubmit(){
-  this._playlistService.createPlaylist(this.playlistForm.value).subscribe(data => {
-    this._router.navigate(['/playlist']);
-  });
-}
-}
