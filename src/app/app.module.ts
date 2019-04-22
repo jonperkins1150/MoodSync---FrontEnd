@@ -40,6 +40,9 @@ import { GenreService } from './services/genre.service';
 import { MoodService } from './services/mood.service';
 import { PlaylistService } from './services/playlist.service';
 import { SongService } from './services/song.service';
+import { PlaylistDetailComponent } from './components/playlist/playlist-detail/playlist-detail.component';
+import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
+import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/playlist-delete.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent }, 
@@ -68,6 +71,9 @@ const routes = [
     PlaylistCreateComponent,
     RegistrationComponent,
     SongComponent,
+    PlaylistDetailComponent,
+    PlaylistEditComponent,
+    PlaylistDeleteComponent,
 
   ],
   imports: [
