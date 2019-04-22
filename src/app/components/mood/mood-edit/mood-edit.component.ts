@@ -6,13 +6,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-Mood-edit',
-  templateUrl: './Mood-edit.component.html',
-  styleUrls: ['./Mood-edit.component.css']
+  selector: 'app-mood-edit',
+  templateUrl: './mood-edit.component.html',
+  styleUrls: ['./mood-edit.component.css']
 })
 export class MoodEditComponent implements OnInit {
 
-  Mood: MoodDetail;
+  mood: MoodDetail;
 
   editMoodForm: FormGroup;
   constructor(private _form: FormBuilder,
@@ -22,7 +22,7 @@ export class MoodEditComponent implements OnInit {
 
 this._ar.paramMap.subscribe(p => {
   this._moodService.getMood(p.get('id')).subscribe((singleMood: MoodDetail) => {
-    this.Mood = singleMood;
+    this.mood = singleMood;
     this.createForm();
   });
 });  

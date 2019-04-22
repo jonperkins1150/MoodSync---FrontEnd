@@ -1,15 +1,24 @@
-<h1>Delete Mood.</h1>
+<h1>Delete Mood</h1>
+<h2>Are you sure you want to delete the mood?</h2>
+
 <hr>
-
-<form #f="ngForm" (ngSubmit)="onDelete()" [formGroup]="moodForm">
+<div *ngIf="mood">
   <div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="MoodName" formControlName="MoodName" type="MoodName" required/>
-      </mat-form-field>
-    </div>
+    <label for="">MoodId</label>
+    <span>{{mood.MoodId}}</span>
   </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Delete Mood</button>
-</form>
 
-<a mat-button routerLink="/moods">Back to List</a>
+  <div>
+    <label for="">MoodName</label>
+    <span>{{mood.MoodName}}</span>
+  </div>
+
+</div>
+
+<div>
+<button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete Mood</b></button>
+</div>
+
+<div>
+<button mat-raised-button class="btn-existing" routerLink="/mood"><b>Back to Mood</b></button>
+</div>
