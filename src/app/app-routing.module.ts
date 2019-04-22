@@ -12,13 +12,38 @@ import { PlaylistDetailComponent } from './components/playlist/playlist-detail/p
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
+import { GenreCreateComponent } from './components/genre/genre-create/genre-create.component';
+import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
+import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
+import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
+import { MoodCreateComponent } from './components/mood/mood-create/mood-create.component';
+import { MoodDetailComponent } from './components/mood/mood-detail/mood-detail.component';
+import { MoodEditComponent } from './components/mood/mood-edit/mood-edit.component';
+import { MoodDeleteComponent } from './components/mood/mood-delete/mood-delete.component';
 
 const routes: Routes = [
   { path: "", component: HomeLoggedComponent },
   { path: 'adminportal', component: AdminportalComponent },
   { path: 'details', component: DetailsComponent }, 
-  { path: 'genre', component: GenreComponent },
-  { path: 'mood', component: MoodComponent }, 
+ 
+  {
+  path: 'genre', children: [
+    { path: '', component: PlaylistComponent },
+    { path: 'genre-create', component: GenreCreateComponent},
+    { path: 'genre-detail/:id', component: GenreDetailComponent},
+    { path: 'genre-edit/:id', component: GenreEditComponent},
+    { path: 'genre-delete/:id', component: GenreDeleteComponent}
+  ]
+},
+  {
+      path: 'mood', children: [
+        { path: '', component: MoodComponent },
+        { path: 'mood-create', component: MoodCreateComponent},
+        { path: 'mood-detail/:id', component: MoodDetailComponent},
+        { path: 'mood-edit/:id', component: MoodEditComponent},
+        { path: 'mood-delete/:id', component: MoodDeleteComponent}
+      ]
+    },
   {
     path: 'playlist', children: [
       { path: '', component: PlaylistComponent },
