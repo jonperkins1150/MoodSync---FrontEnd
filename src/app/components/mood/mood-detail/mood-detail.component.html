@@ -1,15 +1,23 @@
 <h1>Mood Details</h1>
+
 <hr>
+<div *ngIf="mood">
+<div>
+    <label for="">MoodId:</label>
+    <span>{{mood.MoodId}}</span>
+</div>
 
-<form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="moodForm">
-  <div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="MoodName" formControlName="MoodName" type="MoodName" required/>
-      </mat-form-field>
-    </div>
-  </div>
-  <button mat-raised-button class="nav-btn" color="primary" type="submit">Mood Details</button>
-</form>
+<div>
+    <label for="">Mood Name:</label>
+    <span>{{mood.MoodName}}</span>
+</div>
 
-<a mat-button routerLink="/moods">Back to List</a>
+</div>
+
+<div>
+<button mat-raised-button class="btn-edit" type="submit"><b>Edit Mood</b></button>
+</div>
+
+<div>
+<button mat-raised-button class="btn-existing" routerLink="/mood"><b>Back to Mood</b></button>
+</div>

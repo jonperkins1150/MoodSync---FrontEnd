@@ -43,6 +43,9 @@ import { SongService } from './services/song.service';
 import { PlaylistDetailComponent } from './components/playlist/playlist-detail/playlist-detail.component';
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
 import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/playlist-delete.component';
+import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
+import { GenreDetailsComponent } from './components/genre/genre-details/genre-details.component';
+import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent }, 
@@ -74,6 +77,9 @@ const routes = [
     PlaylistDetailComponent,
     PlaylistEditComponent,
     PlaylistDeleteComponent,
+    GenreEditComponent,
+    GenreDetailsComponent,
+    GenreDeleteComponent,
 
   ],
   imports: [
