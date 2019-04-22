@@ -32,16 +32,16 @@ this._ar.paramMap.subscribe(p => {
   }
 createForm() {
   this.editMoodForm = this._form.group({
-    MoodId: new FormControl(this.Mood.MoodId),
-    MoodName: new FormControl(this.Mood.MoodName),
+    MoodId: new FormControl(this.mood.MoodId),
+    MoodName: new FormControl(this.mood.MoodName),
 
   });
 }
 
-onSubmit(form) {
+onSubmit(MoodForm) {
   const updateMood: MoodDetail = {
-    MoodId: form.value.MoodId,
-    MoodName: form.value.MoodName,
+    MoodId: MoodForm.value.MoodId,
+    MoodName: MoodForm.value.MoodName,
     
   };
   this._moodService.updateMood(updateMood).subscribe(d => {
