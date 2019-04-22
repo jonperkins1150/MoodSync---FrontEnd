@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SongService } from 'src/app/services/song.service';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { Converter } from 'src/app/classes/converter';
 
 @Component({
   selector: 'app-details',
@@ -15,17 +16,20 @@ export class DetailsComponent implements OnInit {
         qwer: "yoi",
         rewq: "yuh"
   };
-  public dataForm: FormGroup;
+  //public dataForm: FormGroup;
+  public convert: Converter;
   constructor(private _form: FormBuilder) { }
 
   ngOnInit() {
     //this.dtype = "genre";
     //console.log("data: " + this.dtype);
-    this.makeElements(this.tst);
-    var yep = this.doThingiesAndStuff(this.tst);
-    this.dataForm = this._form.group(yep);
-    console.log(this._form);
-    console.log(this.dataForm.value);
+    //this.makeElements(this.tst);
+    //var yep = this.doThingiesAndStuff(this.tst);
+    //this.dataForm = this._form.group(yep);
+    //console.log(this._form);
+    //console.log(this.dataForm.value);
+    this.convert = new Converter();
+    this.convert.convertFromString("1,3,4,7,11");
   }
 
   doThingiesAndStuff(ent){
