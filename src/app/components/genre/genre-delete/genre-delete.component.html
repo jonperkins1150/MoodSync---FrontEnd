@@ -1,3 +1,24 @@
-<p>
-  genre-delete works!
-</p>
+<h1>Delete Genre</h1>
+<h2>Are you sure you want to delete the genre?</h2>
+
+<hr>
+<div *ngIf="genre">
+  <div>
+    <label for="">GenreId</label>
+    <span>{{genre.GenreId}}</span>
+  </div>
+
+  <div>
+    <label for="">GenreName</label>
+    <span>{{genre.GenreName}}</span>
+  </div>
+
+</div>
+
+<div>
+<button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete Genre</b></button>
+</div>
+
+<div>
+<button mat-raised-button class="btn-existing" routerLink="/genre"><b>Back to Genre</b></button>
+</div>

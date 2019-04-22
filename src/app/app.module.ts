@@ -44,7 +44,7 @@ import { PlaylistDetailComponent } from './components/playlist/playlist-detail/p
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
 import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/playlist-delete.component';
 import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
-import { GenreDetailsComponent } from './components/genre/genre-details/genre-details.component';
+import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
 import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
 
 const routes = [
@@ -78,7 +78,7 @@ const routes = [
     PlaylistEditComponent,
     PlaylistDeleteComponent,
     GenreEditComponent,
-    GenreDetailsComponent,
+    GenreDetailComponent,
     GenreDeleteComponent,
 
   ],
