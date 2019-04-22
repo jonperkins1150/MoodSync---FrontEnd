@@ -1,0 +1,29 @@
+<h1>Playlist Details</h1>
+
+<hr>
+<div *ngif="playlist">
+<div>
+    <label for="">PlaylistId:</label>
+    <span>{{playlist.PlaylistId}}</span>
+</div>
+<div>
+    <label for="">UserId:</label>
+    <span>{{playlist.UserId}}</span>
+</div>
+<div>
+    <label for="">PlaylistName:</label>
+    <span>{{playlist.PlaylistName}}</span>
+</div>
+<div>
+    <label for="">SongList:</label>
+    <span>{{playlist.SongList}}</span>
+</div>
+</div>
+
+<div>
+<button mat-raised-button class="btn-edit" type="submit"><b>Edit Playlist</b></button>
+</div>
+
+<div>
+<button mat-raised-button class="btn-existing" routerLink="/playlist"><b>Back to Playlists</b></button>
+</div>
