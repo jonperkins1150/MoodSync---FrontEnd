@@ -3,8 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
 import { DetailsComponent } from './components/details/details.component';
 import { GenreComponent } from './components/genre/genre.component';
+import { GenreCreateComponent } from './components/genre/genre-create/genre-create.component';
+import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
+import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
+import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { MoodComponent } from './components/mood/mood.component';
+import { MoodCreateComponent } from './components/mood/mood-create/mood-create.component';
+import { MoodDeleteComponent } from './components/mood/mood-delete/mood-delete.component';
+import { MoodDetailComponent } from './components/mood/mood-detail/mood-detail.component';
+import { MoodEditComponent } from './components/mood/mood-edit/mood-edit.component';
 import { PlaylistComponent } from './components/playlist/playlist.component';
 import { PlaylistCreateComponent } from './components/playlist/playlist-create/playlist-create.component';
 import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/playlist-delete.component';
@@ -12,14 +20,6 @@ import { PlaylistDetailComponent } from './components/playlist/playlist-detail/p
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
-import { GenreCreateComponent } from './components/genre/genre-create/genre-create.component';
-import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
-import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
-import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
-import { MoodCreateComponent } from './components/mood/mood-create/mood-create.component';
-import { MoodDetailComponent } from './components/mood/mood-detail/mood-detail.component';
-import { MoodEditComponent } from './components/mood/mood-edit/mood-edit.component';
-import { MoodDeleteComponent } from './components/mood/mood-delete/mood-delete.component';
 
 const routes: Routes = [
   { path: "", component: HomeLoggedComponent },
@@ -28,7 +28,7 @@ const routes: Routes = [
  
   {
   path: 'genre', children: [
-    { path: '', component: PlaylistComponent },
+    { path: '', component: GenreComponent },
     { path: 'genre-create', component: GenreCreateComponent},
     { path: 'genre-detail/:id', component: GenreDetailComponent},
     { path: 'genre-edit/:id', component: GenreEditComponent},
