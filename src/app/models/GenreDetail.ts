@@ -1,3 +1,4 @@
  export interface GenreDetail{
-     GenreName: string;
+    GenreId: number; 
+    GenreName: string;
  }
