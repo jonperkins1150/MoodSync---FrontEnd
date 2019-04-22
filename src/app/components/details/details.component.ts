@@ -29,7 +29,8 @@ export class DetailsComponent implements OnInit {
     //console.log(this._form);
     //console.log(this.dataForm.value);
     this.convert = new Converter();
-    this.convert.convertFromString("1,3,4,7,11");
+    let testDat = this.convert.convertFromString("1,3,4,7");
+    let testStr = this.convert.convertToString(testDat);
   }
 
   doThingiesAndStuff(ent){
