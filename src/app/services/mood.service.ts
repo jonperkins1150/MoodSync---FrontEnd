@@ -14,23 +14,23 @@ export class MoodService {
   constructor(private _http: HttpClient) { }
 
   getMoods() {
-    return this._http.get(`${ApiUrl}/Mood/All`, { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}api/Mood`, { headers: this.getHeaders() });
   }
 
   getMood(id: string) {
-    return this._http.get(`${ApiUrl}/Mood/Single/${id}`, { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}api/Mood/${id}`, { headers: this.getHeaders() });
   }
 
   createMood(mood: CreateMood) {
-    return this._http.post(`${ApiUrl}/Mood`, mood, { headers: this.getHeaders()});
+    return this._http.post(`${ApiUrl}api/Mood`, mood, { headers: this.getHeaders()});
   }
 
   updateMood(mood: MoodDetail) {
-    return this._http.put(`${ApiUrl}/Mood`, mood, { headers: this.getHeaders() });
+    return this._http.put(`${ApiUrl}api/Mood`, mood, { headers: this.getHeaders() });
   }
 
   deleteMood(id: number) {
-    return this._http.delete(`${ApiUrl}/Mood/${id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${ApiUrl}api/Mood/${id}`, { headers: this.getHeaders() });
   }
 
 
