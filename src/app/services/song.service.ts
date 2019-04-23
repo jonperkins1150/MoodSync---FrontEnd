@@ -27,7 +27,7 @@ export class SongService {
   createSong(song: CreateSong){
     console.log("create called");
     console.log(song);
-    return this.http.post("www.google.com", song, { headers: this.getHeaders()});
+    return this.http.post(Api_Url + this.strStub, song, { headers: this.getHeaders()});
   }
 
   updateSong(song: SongDetails){

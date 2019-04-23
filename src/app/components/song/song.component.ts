@@ -12,10 +12,9 @@ import { CreateSong } from 'src/app/models/CreateSong';
 export class SongComponent implements OnInit {
   songs : {}
   tstDat: CreateSong =
-  {SongId: 1,
-   SongName: "garba",
-   Artist: "Yoil",
-   Album: "The Great Garbadarpe",
+  {SongName: "Raster Egg",
+   Artist: "TKress22",
+   Album: "The Great Easter Egg Hunt",
    GenreId: 9,
    ChildFriendly: false
   }
@@ -23,7 +22,7 @@ export class SongComponent implements OnInit {
   constructor(private songserv: SongService,  private _router: Router) { }
 
   ngOnInit() {
-    console.log(this.songserv.createSong(this.tstDat));
+    //console.log(this.songserv.createSong(this.tstDat).subscribe());
     this.songserv.getSong("all", "").subscribe(data => {
       this.songs = data;
       console.log(this.songs);
