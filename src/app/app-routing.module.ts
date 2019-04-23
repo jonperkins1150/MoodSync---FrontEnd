@@ -27,7 +27,6 @@ import { SongEditComponent } from './components/song/song-edit/song-edit.compone
 import { SongDeleteComponent } from './components/song/song-delete/song-delete.component';
 import { SongDetailsComponent } from './components/song/song-details/song-details.component';
 import { RegistrationComponent } from './components/registration/registration.component';
-import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: "", component: HomeLoggedComponent },
@@ -35,7 +34,7 @@ const routes: Routes = [
   { path: 'details', component: DetailsComponent }, 
  
   {
-  path: 'genre', canActivate: [AuthGuard] , children: [
+  path: 'genre', children: [
     { path: '', component: GenreComponent },
     { path: 'genre-create', component: GenreCreateComponent},
     { path: 'genre-detail/:id', component: GenreDetailComponent},
@@ -45,7 +44,7 @@ const routes: Routes = [
   ]
 },
   {
-      path: 'mood', canActivate: [AuthGuard] , children: [
+      path: 'mood', children: [
         { path: '', component: MoodComponent },
         { path: 'mood-create', component: MoodCreateComponent},
         { path: 'mood-detail', component: MoodDetailComponent},
@@ -54,7 +53,7 @@ const routes: Routes = [
       ]
     },
   {
-    path: 'playlist', canActivate: [AuthGuard] , children: [
+    path: 'playlist', children: [
       { path: '', component: PlaylistComponent },
       { path: 'playlist-create', component: PlaylistCreateComponent},
       { path: 'playlist-detail', component: PlaylistDetailComponent},
@@ -62,13 +61,15 @@ const routes: Routes = [
       { path: 'playlist-delete', component: PlaylistDeleteComponent}
     ]
   }, 
-  { path: 'song', canActivate: [AuthGuard] , children: [
+
+  { path: 'song', children: [
     {path: '', component: SongComponent},
     {path: 'song-create', component: SongCreateComponent},
     {path: 'song-edit', component: SongEditComponent},
     {path: 'song-detail', component: SongDetailsComponent},
     {path: 'song-delete', component: SongDeleteComponent}
   ] }
+  
   ];
 
 @NgModule({
