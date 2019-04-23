@@ -11,7 +11,7 @@ import { Api_Url } from '../../environments/environment.prod';
 export class AuthService {
   userInfo: Token;
   isLoggedIn = new Subject<boolean>();
-    isAdmin: boolean;
+    isAdmin: Subject<boolean> = new Subject<boolean>();
 
   constructor(private _http: HttpClient, private _router: Router) { }
 
@@ -29,6 +29,7 @@ export class AuthService {
     localStorage.setItem('id_token', token.access_token);
     this.isLoggedIn.next(true);
     this._router.navigate(['/'])
+    if (token.userName == 'administrator'){this.isAdmin.next(true)};
     });
   }
 
@@ -52,11 +53,4 @@ export class AuthService {
     x.set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
     return x
   }
-  addRolesToUser = function(user, cb) {
-    if(user.username == ['administrator']) {
-      cb(this.auth.isAdmin =true, ['administrator']); 
-    } else {
-      cb(null, ['user']);
-    }
-    };
 }

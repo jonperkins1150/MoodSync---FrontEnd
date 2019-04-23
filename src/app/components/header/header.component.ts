@@ -7,11 +7,14 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isAdmin: boolean;
+
   constructor(public auth: AuthService) {
+    this.auth.isAdmin.subscribe((adminstatus: boolean)=> 
+    this.isAdmin=adminstatus);
       }
 
-  ngOnInit() {
-    console.log()
+  ngOnInit() { }
+    
   }
 
-}

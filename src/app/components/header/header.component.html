@@ -5,7 +5,7 @@
           <li><a routerLink="">Home</a></li>
           <li><a routerLink="/song">Songs</a></li>
           <li><a routerLink="/playlist">Playlists</a></li>
-          <li><a *ngIf="user.username==administrator" routerLink="/adminportal">Admin Portal</a></li>
+          <li><a *ngIf="isAdmin" routerLink="/adminportal">Admin Portal</a></li>
         </ul>
       </div>
     </nav>
