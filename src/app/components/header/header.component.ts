@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HeaderComponent implements OnInit {
   isAdmin: boolean;
-  Logout: any;
+  logout: any;
 
   constructor(public auth: AuthService) {
     this.auth.isAdmin.subscribe((adminstatus: boolean)=> 
