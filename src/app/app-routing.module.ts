@@ -18,8 +18,11 @@ import { PlaylistCreateComponent } from './components/playlist/playlist-create/p
 import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/playlist-delete.component';
 import { PlaylistDetailComponent } from './components/playlist/playlist-detail/playlist-detail.component';
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
-import { RegistrationComponent } from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
+import { SongCreateComponent } from './components/song/song-create/song-create.component';
+import { SongDeleteComponent } from './components/song/song-delete/song-delete.component';
+import { SongDetailsComponent } from './components/song/song-details/song-details.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [

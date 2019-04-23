@@ -20,23 +20,23 @@ export class SongService {
     if(inp != ""){
       this.strStub  += "=" + inp;
     }
-    console.log("get called");
+    //console.log("get called");
     return this.http.get(Api_Url + this.strStub, { headers: this.getHeaders() })
   }
 
   createSong(song: CreateSong){
-    console.log("create called");
-    console.log(song);
+    //console.log("create called");
+    //console.log(song);
     return this.http.post(Api_Url + this.strStub, song, { headers: this.getHeaders()});
   }
 
   updateSong(song: SongDetails){
-    console.log("details called");
+    //console.log("details called");
     return this.http.put(Api_Url + this.strStub, song, { headers: this.getHeaders() });
   }
 
   deleteSong(id: number){
-    console.log("delete called");
+    //console.log("delete called");
     return this.http.delete(Api_Url + this.strStub + "/" + id, { headers: this.getHeaders() });
   }
 

@@ -47,8 +47,7 @@ import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.com
 import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
 import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
 import { AuthGuard } from './guards/auth.guard';
-import { SongcreateComponent } from './songcreate/songcreate.component';
-import { SongCreateComponent } from './song/song-create/song-create.component';
+import { SongCreateComponent } from './components/song/song-create/song-create.component';
 import { SongEditComponent } from './components/song/song-edit/song-edit.component';
 import { SongDetailsComponent } from './components/song/song-details/song-details.component';
 import { SongDeleteComponent } from './components/song/song-delete/song-delete.component';
@@ -86,7 +85,6 @@ const routes = [
     GenreEditComponent,
     GenreDetailComponent,
     GenreDeleteComponent,
-    SongcreateComponent,
     SongCreateComponent,
     SongEditComponent,
     SongDetailsComponent,
