@@ -12,11 +12,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
-  dataSource: MatTableDataSource<GenreDetail>;
+
+  columnNames = [ 'GenreId', 'GenreName', 'buttons'];
+  dataSource: MatTableDataSource<Genre>;
+
     
     constructor(private _genreService: GenreService, private _form: FormBuilder, private _router: Router) { }
-  
-    columnNames = ['GenreId', 'GenreName'];
+ 
     
     ngOnInit() {
     this._genreService.getGenres().subscribe((genre: GenreDetail[]) => {

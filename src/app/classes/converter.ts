@@ -31,11 +31,31 @@ export class Converter {
         return output;
     }
     
+    // convertFromString(input){
+    //     this.ldTstData(10);
+    //     let output : Song[];
+    //     output = [];
+    //     //console.log(input);
+    //     let r = 0;
+    //     while(r < input.length){
+    //         let id = "";
+    //         while(input[r] != "," && r < input.length){
+    //             id += input[r];
+    //             r++;
+    //             //console.log(r);
+    //             //console.log(id);
+    //         }
+    //         output.push(this.testData[id.trim()]);
+    //         r++;
+    //     }
+    //     //console.log(output);
+    //     return output;
+    // }
+
     convertFromString(input){
-        this.ldTstData(10);
         let output : Song[];
         output = [];
-        //console.log(input);
+        console.log(input);
         let r = 0;
         while(r < input.length){
             let id = "";
