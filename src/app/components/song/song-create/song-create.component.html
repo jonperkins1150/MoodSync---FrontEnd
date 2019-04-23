@@ -1,0 +1,45 @@
+<h1>Create Song</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="songForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="SongName" formControlName="SongName" type="SongName" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Album" formControlName="Album" type="Album" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Artist" formControlName="Artist" type="Artist" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="GenreId" formControlName="GenreId" type="GenreId" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="ChildFriendly" formControlName="ChildFriendly" type="ChildFriendly" required/>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="btn-create" type="submit"><b>Create Song</b></button>
+</form>
+
+<div>
+<button mat-raised-button class="btn-existing" routerLink="/song"><b>Back to Song</b></button>
+</div>

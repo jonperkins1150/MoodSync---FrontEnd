@@ -22,6 +22,12 @@ import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/p
 import { PlaylistDetailComponent } from './components/playlist/playlist-detail/playlist-detail.component';
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
 import { SongComponent } from './components/song/song.component';
+import { SongCreateComponent } from './components/song/song-create/song-create.component';
+import { SongEditComponent } from './components/song/song-edit/song-edit.component';
+import { SongDeleteComponent } from './components/song/song-delete/song-delete.component';
+import { SongDetailsComponent } from './components/song/song-details/song-details.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: "", component: HomeLoggedComponent },
@@ -56,7 +62,13 @@ const routes: Routes = [
       { path: 'playlist-delete', component: PlaylistDeleteComponent}
     ]
   }, 
-  { path: 'song', canActivate: [AuthGuard] , component:SongComponent }
+  { path: 'song', canActivate: [AuthGuard] , children: [
+    {path: '', component: SongComponent},
+    {path: 'song-create', component: SongCreateComponent},
+    {path: 'song-edit', component: SongEditComponent},
+    {path: 'song-detail', component: SongDetailsComponent},
+    {path: 'song-delete', component: SongDeleteComponent}
+  ] }
   ];
 
 @NgModule({
