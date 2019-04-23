@@ -11,6 +11,7 @@ import { Api_Url } from '../../environments/environment.prod';
 export class AuthService {
   userInfo: Token;
   isLoggedIn = new Subject<boolean>();
+    isAdmin: Subject<boolean> = new Subject<boolean>();
 
   constructor(private _http: HttpClient, private _router: Router) { }
 
@@ -28,6 +29,7 @@ export class AuthService {
     localStorage.setItem('id_token', token.access_token);
     this.isLoggedIn.next(true);
     this._router.navigate(['/'])
+    if (token.userName == 'administrator'){this.isAdmin.next(true)};
     });
   }
 
@@ -44,6 +46,7 @@ export class AuthService {
     this.isLoggedIn.next(false);
 
     return this._http.post(`${Api_Url}api/Account/Logout`, { headers: this.setHeader() });
+    this._router.navigate(['/home-not-logged'])
   }
   private setHeader(): HttpHeaders {
     const x = new HttpHeaders({ 'Content-Type': 'application/json' });

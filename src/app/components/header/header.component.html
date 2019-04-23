@@ -5,12 +5,18 @@
           <li><a routerLink="">Home</a></li>
           <li><a routerLink="/song">Songs</a></li>
           <li><a routerLink="/playlist">Playlists</a></li>
-          <li><a routerLink="/adminportal">Admin Portal</a></li>
+          <li><a *ngIf="isAdmin" routerLink="/adminportal">Admin Portal</a></li>
         </ul>
       </div>
     </nav>
+    <!-- <span *ngIf="auth.userName">
+      {{ user.userName }} -->
+    </span>
     <div style="position: absolute; right: 25px;">
     <button mat-raised-button class="nav-btn-register" routerLink="/registration">Register</button>
     <button mat-raised-button class="nav-btn-login" routerLink="/login">Login</button>
+    <div class="logout">
+    <a (click)=logout() routerLink="/home-not-logged">Log Out</a>
+  </div>
   </div>
   </mat-toolbar>

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminGuard } from './guards/admin.guard';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
 import { DetailsComponent } from './components/details/details.component';
 import { GenreComponent } from './components/genre/genre.component';
@@ -7,6 +9,7 @@ import { GenreCreateComponent } from './components/genre/genre-create/genre-crea
 import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
 import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
 import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
+
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { MoodComponent } from './components/mood/mood.component';
 import { MoodCreateComponent } from './components/mood/mood-create/mood-create.component';
@@ -35,8 +38,9 @@ const routes: Routes = [
   path: 'genre', canActivate: [AuthGuard] , children: [
     { path: '', component: GenreComponent },
     { path: 'genre-create', component: GenreCreateComponent},
-    { path: 'genre-detail', component: GenreDetailComponent},
-    { path: 'genre-edit', component: GenreEditComponent},
+    { path: 'genre-detail/:id', component: GenreDetailComponent},
+    { path: 'genre-edit/:id', component: GenreEditComponent},
+
     { path: 'genre-delete', component: GenreDeleteComponent}
   ]
 },
@@ -70,6 +74,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
   ],
+  
   
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
