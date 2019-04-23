@@ -45,7 +45,7 @@ onSubmit(GenreForm) {
     
   };
   this._genreService.updateGenre(updateGenre).subscribe(d => {
-    this._router.navigate(['/Genre']);
+    this._router.navigate(['/genre']);
   });
 }
 }

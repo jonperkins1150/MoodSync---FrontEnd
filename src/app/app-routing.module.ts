@@ -9,6 +9,7 @@ import { GenreCreateComponent } from './components/genre/genre-create/genre-crea
 import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
 import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
 import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
+
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { MoodComponent } from './components/mood/mood.component';
 import { MoodCreateComponent } from './components/mood/mood-create/mood-create.component';
@@ -21,6 +22,11 @@ import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/p
 import { PlaylistDetailComponent } from './components/playlist/playlist-detail/playlist-detail.component';
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
 import { SongComponent } from './components/song/song.component';
+import { SongCreateComponent } from './components/song/song-create/song-create.component';
+import { SongEditComponent } from './components/song/song-edit/song-edit.component';
+import { SongDeleteComponent } from './components/song/song-delete/song-delete.component';
+import { SongDetailsComponent } from './components/song/song-details/song-details.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 const routes: Routes = [
   { path: "", component: HomeLoggedComponent },
@@ -31,8 +37,9 @@ const routes: Routes = [
   path: 'genre', children: [
     { path: '', component: GenreComponent },
     { path: 'genre-create', component: GenreCreateComponent},
-    { path: 'genre-detail', component: GenreDetailComponent},
-    { path: 'genre-edit', component: GenreEditComponent},
+    { path: 'genre-detail/:id', component: GenreDetailComponent},
+    { path: 'genre-edit/:id', component: GenreEditComponent},
+
     { path: 'genre-delete', component: GenreDeleteComponent}
   ]
 },
@@ -54,7 +61,15 @@ const routes: Routes = [
       { path: 'playlist-delete', component: PlaylistDeleteComponent}
     ]
   }, 
-  { path: 'song', component:SongComponent }
+
+  { path: 'song', children: [
+    {path: '', component: SongComponent},
+    {path: 'song-create', component: SongCreateComponent},
+    {path: 'song-edit', component: SongEditComponent},
+    {path: 'song-detail', component: SongDetailsComponent},
+    {path: 'song-delete', component: SongDeleteComponent}
+  ] }
+  
   ];
 
 @NgModule({
