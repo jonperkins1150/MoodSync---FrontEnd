@@ -35,6 +35,11 @@
   <mat-cell *matCellDef="let song">{{song.Artist}}</mat-cell>
 </ng-container>
 
+<ng-container matColumnDef="ChildFriendly">
+    <mat-header-cell *matHeaderCellDef>Child Friendly</mat-header-cell>
+    <mat-cell *matCellDef="let song">{{song.ChildFriendly}}</mat-cell>
+  </ng-container>
+
 <ng-container matColumnDef="buttons">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let song">
