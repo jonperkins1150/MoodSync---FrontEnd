@@ -1,3 +1,12 @@
+# Welcome to MoodSync!
+
+MoodSync is built using an ASP.NET Api backend that can be found (https://moodsync.azurewebsites.net/),  and an Angular front end that can be found at (https://moodsync1150.herokuapp.com) This project was built with a three person team of developers (Lisa Kilgore, Trever Kress, and Jon Perkins at [Eleven Fifty Academy](https://www.elevenfifty.org/) in Fishers, Indiana.
+
+# MoodSync App Purpose
+
+MoodSync will allow a user to create and listen to playlists based on their "mood", or they can listen to pre-generated playlists that correspond to existing moods. 
+Users may `create|edit|delete` their own playlists,  however only the admin is able to perform these functions to the mood, genre, and song tables. 
+
 # MoodSyncFrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
