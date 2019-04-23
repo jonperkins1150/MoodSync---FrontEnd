@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminGuard } from './guards/admin.guard';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
 import { DetailsComponent } from './components/details/details.component';
 import { GenreComponent } from './components/genre/genre.component';
@@ -18,9 +20,7 @@ import { PlaylistCreateComponent } from './components/playlist/playlist-create/p
 import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/playlist-delete.component';
 import { PlaylistDetailComponent } from './components/playlist/playlist-detail/playlist-detail.component';
 import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
-import { RegistrationComponent } from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
-import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: "", component: HomeLoggedComponent },
@@ -60,6 +60,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
   ],
+  
   
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

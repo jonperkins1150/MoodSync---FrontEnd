@@ -47,6 +47,7 @@ import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.com
 import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
 import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AdminGuard } from './guards/admin.guard';
 
 const routes = [
   { path: 'registration', component: RegistrationComponent }, 
@@ -100,6 +101,7 @@ const routes = [
     
   ],
   providers: [
+  AdminGuard,
   AuthGuard,
   AuthService,
   GenreService,
