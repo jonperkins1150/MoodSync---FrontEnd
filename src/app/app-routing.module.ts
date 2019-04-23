@@ -31,27 +31,27 @@ const routes: Routes = [
   path: 'genre', canActivate: [AuthGuard] , children: [
     { path: '', component: GenreComponent },
     { path: 'genre-create', component: GenreCreateComponent},
-    { path: 'genre-detail/:id', component: GenreDetailComponent},
-    { path: 'genre-edit/:id', component: GenreEditComponent},
-    { path: 'genre-delete/:id', component: GenreDeleteComponent}
+    { path: 'genre-detail', component: GenreDetailComponent},
+    { path: 'genre-edit', component: GenreEditComponent},
+    { path: 'genre-delete', component: GenreDeleteComponent}
   ]
 },
   {
       path: 'mood', canActivate: [AuthGuard] , children: [
         { path: '', component: MoodComponent },
         { path: 'mood-create', component: MoodCreateComponent},
-        { path: 'mood-detail/:id', component: MoodDetailComponent},
-        { path: 'mood-edit/:id', component: MoodEditComponent},
-        { path: 'mood-delete/:id', component: MoodDeleteComponent}
+        { path: 'mood-detail', component: MoodDetailComponent},
+        { path: 'mood-edit', component: MoodEditComponent},
+        { path: 'mood-delete', component: MoodDeleteComponent}
       ]
     },
   {
     path: 'playlist', canActivate: [AuthGuard] , children: [
       { path: '', component: PlaylistComponent },
       { path: 'playlist-create', component: PlaylistCreateComponent},
-      { path: 'playlist-detail/:id', component: PlaylistDetailComponent},
-      { path: 'playlist-edit/:id', component: PlaylistEditComponent},
-      { path: 'playlist-delete/:id', component: PlaylistDeleteComponent}
+      { path: 'playlist-detail', component: PlaylistDetailComponent},
+      { path: 'playlist-edit', component: PlaylistEditComponent},
+      { path: 'playlist-delete', component: PlaylistDeleteComponent}
     ]
   }, 
   { path: 'song', canActivate: [AuthGuard] , component:SongComponent }
