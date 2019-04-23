@@ -1,6 +1,8 @@
 <h1>Genres</h1>
 <hr>
-<button mat-raised-button class="btn-create" routerLink="/genre/genre-create"><b>Create New Genre</b></button>
+<button mat-raised-button class="btn-create" routerLink="/genre/genre-create"><b>Create</b></button>
+<button mat-raised-button class="btn-edit" routerLink="/genre/genre-edit"><b>Edit</b></button>
+<button mat-raised-button class="btn-delete" routerLink="/genre/genre-delete"><b>Delete</b></button>
 <div> 
 <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
