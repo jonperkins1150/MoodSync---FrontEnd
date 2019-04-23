@@ -24,6 +24,7 @@ createForm(){
     PlaylistName: new FormControl,
     SongList: new FormControl
   });
+  console.log(this.playlistForm)
 }
 
 onSubmit(){

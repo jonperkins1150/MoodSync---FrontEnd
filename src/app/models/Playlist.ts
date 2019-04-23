@@ -1,6 +1,6 @@
 export interface Playlist{
     PlaylistId: number;
-    UserId: string;
+    UserId: number;
     PlaylistName: string;
     SongList: string;
 }
