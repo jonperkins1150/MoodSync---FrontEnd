@@ -28,6 +28,8 @@ this._ar.paramMap.subscribe(p => {
 });  
 }
 
+
+
   ngOnInit() {
   }
 createForm() {
@@ -45,7 +47,9 @@ onSubmit(MoodForm) {
     
   };
   this._moodService.updateMood(updateMood).subscribe(d => {
-    this._router.navigate(['/Mood']);
+    this._router.navigate(['/mood']);
   });
 }
 }
+
+

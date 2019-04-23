@@ -48,6 +48,7 @@ import { GenreDetailComponent } from './components/genre/genre-details/genre-det
 import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
 import { AuthGuard } from './guards/auth.guard';
 
+
 const routes = [
   { path: 'registration', component: RegistrationComponent }, 
   { path: 'login', component: LoginComponent },
@@ -81,6 +82,7 @@ const routes = [
     GenreEditComponent,
     GenreDetailComponent,
     GenreDeleteComponent,
+    
 
   ],
   imports: [
