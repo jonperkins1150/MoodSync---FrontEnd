@@ -26,11 +26,11 @@ export class GenreService {
   }
 
   updateGenre(genre: GenreDetail) {
-    return this._http.put(`${Api_Url}api/Genre`, genre, { headers: this.getHeaders() });
+    return this._http.put(`${Api_Url}api/Genre/genre-edit/`, genre, { headers: this.getHeaders() });
   }
 
   deleteGenre(id: number) {
-    return this._http.delete(`${Api_Url}api/Genre/${id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${Api_Url}api/Genre/genre-delete/${id}`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {
