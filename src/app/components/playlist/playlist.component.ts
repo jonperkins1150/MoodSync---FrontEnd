@@ -22,10 +22,4 @@ export class PlaylistComponent implements OnInit {
     this.dataSource = new MatTableDataSource<Playlist>(playlist)
   });
   }
-  
-  onSubmit(){
-  //this._playlistService.createPlaylist(id).subscribe((playlist: Playlist[]) => {
-  //   this._router.navigate(['/playlists']);
-  // });
-  }
 }
