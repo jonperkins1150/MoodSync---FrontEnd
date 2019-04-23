@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'details', component: DetailsComponent }, 
  
   {
-  path: 'genre', canActivate: [AuthGuard] , children: [
+  path: 'genre', children: [
     { path: '', component: GenreComponent },
     { path: 'genre-create', component: GenreCreateComponent},
     { path: 'genre-detail', component: GenreDetailComponent},
@@ -37,7 +37,7 @@ const routes: Routes = [
   ]
 },
   {
-      path: 'mood', canActivate: [AuthGuard] , children: [
+      path: 'mood', children: [
         { path: '', component: MoodComponent },
         { path: 'mood-create', component: MoodCreateComponent},
         { path: 'mood-detail', component: MoodDetailComponent},
@@ -46,7 +46,7 @@ const routes: Routes = [
       ]
     },
   {
-    path: 'playlist', canActivate: [AuthGuard] , children: [
+    path: 'playlist', children: [
       { path: '', component: PlaylistComponent },
       { path: 'playlist-create', component: PlaylistCreateComponent},
       { path: 'playlist-detail', component: PlaylistDetailComponent},
@@ -54,7 +54,7 @@ const routes: Routes = [
       { path: 'playlist-delete', component: PlaylistDeleteComponent}
     ]
   }, 
-  { path: 'song', canActivate: [AuthGuard] , component:SongComponent }
+  { path: 'song', component:SongComponent }
   ];
 
 @NgModule({
