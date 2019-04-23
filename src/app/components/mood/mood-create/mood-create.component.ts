@@ -25,7 +25,7 @@ export class MoodCreateComponent implements OnInit {
   }
   onSubmit() {
     this._moodService.createMood(this.moodForm.value).subscribe(data => {
-      this._router.navigate(['/moods']);
+      this._router.navigate(['/mood']);
     })
   }
 }

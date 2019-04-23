@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Genre} from '../../classes/genre';
 import { GenreService } from 'src/app/services/genre.service';
+import { GenreDetail } from 'src/app/models/GenreDetail';
+import { MatTableDataSource } from '@angular/material';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-genre',
@@ -8,17 +12,15 @@ import { GenreService } from 'src/app/services/genre.service';
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
-genre: {}
-
-  constructor(private data: GenreService) { }
-
-  ngOnInit() {
-  this.retrieveGenre();
-   }
-retrieveGenre(): void{
-  this.data.getGenres().subscribe(data => {
-    this.genre = data;
-    console.log(this.genre);
+  dataSource: MatTableDataSource<GenreDetail>;
+    
+    constructor(private _genreService: GenreService, private _form: FormBuilder, private _router: Router) { }
+  
+    columnNames = ['GenreId', 'GenreName'];
+    
+    ngOnInit() {
+    this._genreService.getGenres().subscribe((genre: GenreDetail[]) => {
+    this.dataSource = new MatTableDataSource<GenreDetail>(genre)
   });
-}
+  }
 }

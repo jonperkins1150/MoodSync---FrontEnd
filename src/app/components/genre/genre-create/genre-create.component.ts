@@ -25,7 +25,7 @@ export class GenreCreateComponent implements OnInit {
   }
   onSubmit() {
     this._genreService.createGenre(this.genreForm.value).subscribe(data => {
-      this._router.navigate(['/genres']);
+      this._router.navigate(['/genre']);
     })
   }
 }

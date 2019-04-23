@@ -1,1 +1,35 @@
+<h1>Genres</h1>
+<hr>
+<button mat-raised-button class="btn-create" routerLink="/genre/genre-create"><b>Create New Genre</b></button>
+<div> 
+<mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
+<ng-container matColumnDef="details">
+    <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+    <mat-cell *matCellDef="let genre" routerLink="//genre-detail/{{genre.GenreId}}">
+    <i class="material-icons">library_books</i>
+    </mat-cell>
+</ng-container>    
+
+<ng-container matColumnDef="GenreId">
+    <mat-header-cell *matHeaderCellDef>Genre Id</mat-header-cell>
+    <mat-cell *matCellDef="let genre">{{genre.GenreId}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="GenreName">
+    <mat-header-cell *matHeaderCellDef>Genre Name</mat-header-cell>
+    <mat-cell *matCellDef="let genre">{{genre.GenreName}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="buttons">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let genre">
+        <i mat-icon-class="material-icons" routerLink="/genre-edit/{{genre.GenreId}}">Edit</i>
+        <i class="material-icons" routerLink="/mood-delete/{{genre.GenreId}}">Delete</i>
+    </mat-cell>
+</ng-container>
+
+</mat-table>
+</div>
