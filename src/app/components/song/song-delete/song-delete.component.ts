@@ -14,7 +14,7 @@ export class SongDeleteComponent implements OnInit {
 
   constructor(private _songService: SongService, private _ar: ActivatedRoute, private _router: Router) { 
   this._ar.paramMap.subscribe(p => {
-    this._songService.getSong("string", "string").subscribe((singleSong: SongDetails) => {
+    this._songService.deleteSong(<number><unknown>p.get('id')).subscribe((singleSong: SongDetails) => {
       this.song = singleSong;
     });
   });
