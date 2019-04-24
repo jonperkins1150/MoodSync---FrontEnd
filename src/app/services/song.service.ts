@@ -16,12 +16,12 @@ export class SongService {
   constructor(private http: HttpClient) { }
 
   getSong(type:string, inp:string): Observable<any>{
-    this.strStub += "?type=" + type + "&inp";
+    let ministr = "?type=" + type + "&inp";
     if(inp != ""){
-      this.strStub  += "=" + inp;
+      ministr  += "=" + inp;
     }
     //console.log("get called");
-    return this.http.get(Api_Url + this.strStub, { headers: this.getHeaders() })
+    return this.http.get(Api_Url + this.strStub + ministr, { headers: this.getHeaders() })
   }
 
   createSong(song: CreateSong){
