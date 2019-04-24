@@ -1,3 +1,24 @@
-<p>
-  song-delete works!
-</p>
+<h1>Delete Song</h1>
+<h2>Are you sure you want to delete the song?</h2>
+
+<hr>
+<div *ngIf="song">
+  <div>
+    <label for="">Song Id</label>
+    <span>{{song.SongId}}</span>
+  </div>
+
+  <div>
+    <label for="">Song Name</label>
+  <h3><span>{{song.SongName}}</span></h3>
+  </div>
+
+</div>
+
+<div>
+    <button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete</b></button>
+  </div>
+  &nbsp;&nbsp;
+  <div>
+  <button mat-raised-button class="btn-existing" routerLink="/song"><b>Back to Songs</b></button>
+  </div>
