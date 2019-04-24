@@ -20,7 +20,7 @@ export class SongEditComponent implements OnInit {
               private _router: Router) { 
 
 this._ar.paramMap.subscribe(p => {
-  this._songService.getSong("string", "string").subscribe((singleSong: SongDetails) => {
+  this._songService.getSong("id", p.get('id')).subscribe((singleSong: SongDetails) => {
     this.song = singleSong;
     this.createForm();
   });
