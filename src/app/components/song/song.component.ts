@@ -14,7 +14,7 @@ import { MatTableDataSource } from '@angular/material';
 export class SongComponent implements OnInit {
   dataSource: MatTableDataSource<Song>;
   
-  columnNames = ['SongId', 'SongName', 'Album', 'Artist', "ChildFriendly"];
+  columnNames = ['SongId', 'SongName', 'Album', 'Artist', 'ChildFriendly', 'buttons'];
 
   constructor(private songserv: SongService,  private _router: Router) { }
 

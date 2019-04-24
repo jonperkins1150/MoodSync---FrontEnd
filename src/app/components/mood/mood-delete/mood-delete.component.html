@@ -4,21 +4,17 @@
 <hr>
 <div *ngIf="mood">
   <div>
-    <label for="">MoodId</label>
-    <span>{{mood.MoodId}}</span>
-  </div>
-
   <div>
-    <label for="">MoodName</label>
-    <span>{{mood.MoodName}}</span>
+    <label for="">Mood Name</label>
+    <h3><span>{{mood.MoodName}}</span></h3>
   </div>
 
 </div>
 
 <div>
 <button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete Mood</b></button>
-</div>
-
+</div>>
+&nbsp;&nbsp;
 <div>
 <button mat-raised-button class="btn-existing" routerLink="/mood"><b>Back to Mood</b></button>
 </div>

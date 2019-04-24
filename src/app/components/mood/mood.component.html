@@ -1,8 +1,9 @@
 <h1>Moods</h1>
 <hr>
+<div>
 <button mat-raised-button class="btn-create" routerLink="/mood/mood-create"><b>Create</b></button>
-<!-- <button mat-raised-button class="btn-edit" routerLink="/mood/mood-edit"><b>Edit</b></button>
-<button mat-raised-button class="btn-delete" routerLink="/mood/mood-delete"><b>Delete</b></button> -->
+</div>
+&nbsp;
 <div> 
 <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
@@ -28,8 +29,8 @@
 <ng-container matColumnDef="buttons">
     <mat-header-cell *matHeaderCellDef> </mat-header-cell>
     <mat-cell *matCellDef="let mood">
-            <button mat-raised-button class="btn-edit" routerLink="/mood/mood-edit/{{mood.MoodId}}"><b>Edit  </b></button>
-            <button mat-raised-button class="btn-delete" routerLink="/mood/mood-delete/{{mood.MoodId}}"><b>  Delete</b></button>
+        <button mat-raised-button class="btn-edit" style="position: absolute; right: 110px;" routerLink="/mood/mood-edit/{{mood.MoodId}}"><b>Edit</b></button>
+        <button mat-raised-button class="btn-delete" style="position: absolute; right: 20px;"  routerLink="/mood/mood-delete/{{mood.MoodId}}"><b>Delete</b></button>
     </mat-cell>
 </ng-container>
 

@@ -2,17 +2,19 @@
   <nav class="nav">                    
     <div>
         <ul id="nav-ul">          
-          <li><a routerLink="">Home</a></li>
-          <li><a routerLink="/song">Songs</a></li>
-          <li><a routerLink="/playlist">Playlists</a></li>
-          <li><a *ngIf="isAdmin" routerLink="/adminportal">Admin Portal</a></li>
+          <li><a routerLink="" style="text-decoration: none;">Home</a></li>
+          <li><a routerLink="/song" style="text-decoration: none;">Songs</a></li>
+          <li><a routerLink="/playlist" style="text-decoration: none;">Playlists</a></li>
+          <li><a *ngIf="isAdmin" routerLink="/adminportal" style="text-decoration: none;">Admin Portal</a></li>
         </ul>
       </div>
     </nav>
-    <div style="position: absolute; right: 25px;">
+    <div style="position: absolute; right: 10px;">
     <button mat-raised-button class="nav-btn-register" routerLink="/registration">Register</button>
+    &nbsp;
     <button mat-raised-button class="nav-btn-login" routerLink="/login">Login</button>
-    <div class="logout">
+    
+    <div class="logout" style="position: absolute; right: 10px; text-decoration: none;">
     <a (click)=logout() routerLink="/home-not-logged">Log Out</a>
   </div>
   </div>

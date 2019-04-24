@@ -3,7 +3,7 @@
 <div>
 <button mat-raised-button class="btn-create" routerLink="/playlist/playlist-create"><b>Create</b></button>
 </div>
-
+&nbsp;
 <div> 
 <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
@@ -13,11 +13,6 @@
     <mat-header-cell *matHeaderCellDef>Playlist #</mat-header-cell>
     <mat-cell *matCellDef="let playlist">{{playlist.PlaylistId}}</mat-cell>
 </ng-container>
-
-<!-- <ng-container matColumnDef="UserId">
-    <mat-header-cell *matHeaderCellDef>User Id</mat-header-cell>
-    <mat-cell *matCellDef="let playlist">{{playlist.UserId}}</mat-cell>
-</ng-container> -->
 
 <ng-container matColumnDef="PlaylistName">
     <mat-header-cell *matHeaderCellDef>Playlist Name</mat-header-cell>
@@ -32,8 +27,8 @@
 <ng-container matColumnDef="buttons">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let playlist">
-        <button mat-raised-button class="btn-edit" routerLink="/playlist/playlist-edit/{{playlist.PlaylistId}}"><b>Edit</b></button>
-        <button mat-raised-button class="btn-delete" routerLink="/playlist/playlist-delete/{{playlist.PlaylistId}}"><b>Delete</b></button>
+        <button mat-raised-button class="btn-edit" style="position: absolute; right: 110px;" routerLink="/playlist/playlist-edit/{{playlist.PlaylistId}}"><b>Edit</b></button>
+        <button mat-raised-button class="btn-delete" style="position: absolute; right: 20px;" routerLink="/playlist/playlist-delete/{{playlist.PlaylistId}}"><b>Delete</b></button>
     </mat-cell>
 </ng-container>
 

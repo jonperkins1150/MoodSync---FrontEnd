@@ -7,10 +7,12 @@ ul#nav-ul li{
     display: inline;
     padding: 20px; 
     align-items: left;
+    text-decoration-line: none;
 }
 .logout{
     font-family: 'Nanum Pen Script', cursive;
-    font-size: 1.3em;
+    font-size: 1em;
+    text-decoration-line: none;
 }
 
 .dropdown:hover .dropdown-content {
@@ -115,10 +117,8 @@ p{
  
 .adminportal-links{
     font-family: 'Nanum Pen Script', cursive;
-    font-size: 2em;
+    font-size: 2.5em;
     list-style: none;
-    padding-top: 2em;
-    padding-bottom: 2em;
 }
 
 .columnNames{
