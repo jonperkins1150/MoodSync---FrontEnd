@@ -7,29 +7,31 @@ import { CreateMood } from '../models/CreateMood';
 import { MoodDetail } from '../models/MoodDetail';
 import { Api_Url } from 'src/environments/environment.prod';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class MoodService {
 
   constructor(private _http: HttpClient) { }
 
   getMoods() {
-    return this._http.get(`${Api_Url}api/Mood`, { headers: this.getHeaders() });
+    return this._http.get(`${Api_Url}api/mood`, { headers: this.getHeaders() });
   }
 
   getMood(id: string) {
-    return this._http.get(`${Api_Url}api/Mood/${id}`, { headers: this.getHeaders() });
+    return this._http.get(`${Api_Url}api/mood/${id}`, { headers: this.getHeaders() });
   }
 
   createMood(mood: CreateMood) {
-    return this._http.post(`${Api_Url}api/Mood`, mood, { headers: this.getHeaders()});
+    return this._http.post(`${Api_Url}api/mood`, mood, { headers: this.getHeaders()});
   }
 
   updateMood(mood: MoodDetail) {
-    return this._http.put(`${Api_Url}api/Mood`, mood, { headers: this.getHeaders() });
+    return this._http.put(`${Api_Url}api/mood/mood-edit`, mood, { headers: this.getHeaders() });
   }
 
   deleteMood(id: number) {
-    return this._http.delete(`${Api_Url}api/Mood/${id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${Api_Url}api/mood/${id}`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {

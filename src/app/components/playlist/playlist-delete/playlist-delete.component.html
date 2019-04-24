@@ -4,25 +4,13 @@
 <hr>
 <div *ngIf="playlist">
   <div>
-    <label for="">PlaylistId</label>
-    <span>{{playlist.PlaylistId}}</span>
+    <label for="">Playlist Name</label>
+    <h3><span>{{playlist.PlaylistName}}</span></h3>
   </div>
-  <div>
-    <label for="">UserId</label>
-    <span>{{playlist.UserId}}</span>
-  </div>
-  <div>
-    <label for="">PlaylistName</label>
-    <span>{{playlist.PlaylistName}}</span>
-  </div>
-  <div>
-    <label for="">SongList</label>
-    <span>{{playlist.SongList}}</span>
-  </div>
-</div>
+
 
 <div>
-<button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete Playlist</b></button>
+<button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete</b></button>
 </div>
 
 <div>

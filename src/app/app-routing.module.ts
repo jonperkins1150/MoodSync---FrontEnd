@@ -39,35 +39,34 @@ const routes: Routes = [
     { path: 'genre-create', component: GenreCreateComponent},
     { path: 'genre-detail/:id', component: GenreDetailComponent},
     { path: 'genre-edit/:id', component: GenreEditComponent},
-
-    { path: 'genre-delete', component: GenreDeleteComponent}
+    { path: 'genre-delete/:id', component: GenreDeleteComponent}
   ]
 },
   {
       path: 'mood', children: [
         { path: '', component: MoodComponent },
         { path: 'mood-create', component: MoodCreateComponent},
-        { path: 'mood-detail', component: MoodDetailComponent},
-        { path: 'mood-edit', component: MoodEditComponent},
-        { path: 'mood-delete', component: MoodDeleteComponent}
+        { path: 'mood-detail/:id', component: MoodDetailComponent},
+        { path: 'mood-edit/:id', component: MoodEditComponent},
+        { path: 'mood-delete/:id', component: MoodDeleteComponent}
       ]
     },
   {
     path: 'playlist', children: [
       { path: '', component: PlaylistComponent },
       { path: 'playlist-create', component: PlaylistCreateComponent},
-      { path: 'playlist-detail', component: PlaylistDetailComponent},
-      { path: 'playlist-edit', component: PlaylistEditComponent},
-      { path: 'playlist-delete', component: PlaylistDeleteComponent}
+      { path: 'playlist-detail/:id', component: PlaylistDetailComponent},
+      { path: 'playlist-edit/:id', component: PlaylistEditComponent},
+      { path: 'playlist-delete/:id', component: PlaylistDeleteComponent}
     ]
   }, 
 
   { path: 'song', children: [
     {path: '', component: SongComponent},
     {path: 'song-create', component: SongCreateComponent},
-    {path: 'song-edit', component: SongEditComponent},
-    {path: 'song-detail', component: SongDetailsComponent},
-    {path: 'song-delete', component: SongDeleteComponent}
+    {path: 'song-edit/:id', component: SongEditComponent},
+    {path: 'song-detail/:id', component: SongDetailsComponent},
+    {path: 'song-delete/:id', component: SongDeleteComponent}
   ] }
   
   ];

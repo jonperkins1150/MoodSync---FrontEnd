@@ -4,9 +4,9 @@
 <div *ngIf="mood">
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editMoodForm">
   <div>
-    <div hidden>
+    <div >
       <mat-form-field>
-        <input matInput placeholder="MoodId" formControlName="MoodId" type="MoodId" required [value]="playlist.PlaylistId" />
+        <input matInput placeholder="MoodId" formControlName="MoodId" type="MoodId" required [value]="mood.MoodId" />
       </mat-form-field>
     </div>
 
@@ -18,7 +18,7 @@
     </div>
 
 </div>
-<button mat-raised-button class="btn-create" type="submit"><b>Create Mood</b></button>
+<button mat-raised-button class="btn-create" type="submit"><b>Save</b></button>
 </form>
 </div>
 

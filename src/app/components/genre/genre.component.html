@@ -1,12 +1,15 @@
 <h1>Genres</h1>
 <hr>
 <button mat-raised-button class="btn-create" routerLink="/genre/genre-create"><b>Create</b></button>
-<!-- <button mat-raised-button class="btn-edit" routerLink="/genre/genre-edit"><b>Edit</b></button>
-<button mat-raised-button class="btn-delete" routerLink="/genre/genre-delete"><b>Delete</b></button> -->
 <div> 
 <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+    
+<ng-container matColumnDef="Details">
+    <mat-header-cell *matHeaderCellDef>Details</mat-header-cell>
+    <mat-cell *matCellDef="let genre" routerLink="/genre/Details/{{genre.GenreId}}"></mat-cell>
+</ng-container>
 
 <ng-container matColumnDef="GenreId">
     <mat-header-cell *matHeaderCellDef>Genre Id</mat-header-cell>
@@ -21,8 +24,8 @@
 <ng-container matColumnDef="buttons">
     <mat-header-cell *matHeaderCellDef> </mat-header-cell>
     <mat-cell *matCellDef="let genre">
-            <button mat-raised-button class="btn-edit" routerLink="/genre/genre-edit/{{genre.GenreId}}"><b>Edit  </b></button>
-            <button mat-raised-button class="btn-delete" routerLink="/genre/genre-delete/{{genre.GenreId}}"><b>  Delete</b></button>
+            <button mat-raised-button class="btn-edit" routerLink="/genre/genre-edit/{{genre.GenreId}}"><b>Edit</b></button>
+            <button mat-raised-button class="btn-delete" routerLink="/genre/genre-delete/{{genre.GenreId}}"><b>Delete</b></button>
 
 
     </mat-cell>
