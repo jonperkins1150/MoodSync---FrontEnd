@@ -13,7 +13,9 @@ export class GenreDetailComponent implements OnInit {
 
  genre: GenreDetail;
  
- constructor(private _activatedRoute: ActivatedRoute, private _genreService: GenreService) { }
+ constructor(private _activatedRoute: ActivatedRoute, private _genreService: GenreService) { 
+   
+ }
  
  ngOnInit() {
   this._activatedRoute.paramMap.subscribe(routeData => {
