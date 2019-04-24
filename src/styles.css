@@ -86,8 +86,15 @@ h2{
     padding-top: -70px;
 }
 h3{
+    font-family: 'Nanum Gothic', cursive;
+    font-size: 2em;
+    color: #7f00b8;
+    text-align: center;
+}
+
+h4{
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 3em;
+    font-size: 1.5em;
     color: #7f00b8;
     text-align: center;
 }
@@ -119,3 +126,31 @@ font-family: 'Nanum Pen Script', cursive;
     font-size: 3em;
     color: #064b55;
 }
+
+.mat-table{
+    background-color: rgba(255, 255, 255, .4);
+    border: 5px;
+    border-style: solid;
+    border-color: #493267;
+}
+
+.mat-header-cell{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 2em;
+    color: #7f00b8;
+    text-shadow: 1px 1px 1px black;
+}
+
+.mat-cell{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em; 
+    color:#064b55;
+    text-shadow: 1px 1px 1px black;
+    text-align: left;
+}
+
+label{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 2.5em;
+    color:  #7f00b8;
+    }

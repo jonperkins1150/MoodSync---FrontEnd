@@ -55,18 +55,18 @@ const routes: Routes = [
     path: 'playlist', children: [
       { path: '', component: PlaylistComponent },
       { path: 'playlist-create', component: PlaylistCreateComponent},
-      { path: 'playlist-detail', component: PlaylistDetailComponent},
-      { path: 'playlist-edit', component: PlaylistEditComponent},
-      { path: 'playlist-delete', component: PlaylistDeleteComponent}
+      { path: 'playlist-detail/:id', component: PlaylistDetailComponent},
+      { path: 'playlist-edit/:id', component: PlaylistEditComponent},
+      { path: 'playlist-delete/:id', component: PlaylistDeleteComponent}
     ]
   }, 
 
   { path: 'song', children: [
     {path: '', component: SongComponent},
     {path: 'song-create', component: SongCreateComponent},
-    {path: 'song-edit', component: SongEditComponent},
-    {path: 'song-detail', component: SongDetailsComponent},
-    {path: 'song-delete', component: SongDeleteComponent}
+    {path: 'song-edit/:id', component: SongEditComponent},
+    {path: 'song-detail/:id', component: SongDetailsComponent},
+    {path: 'song-delete/:id', component: SongDeleteComponent}
   ] }
   
   ];
