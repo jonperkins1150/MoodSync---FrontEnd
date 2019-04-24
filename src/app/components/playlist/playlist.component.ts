@@ -15,7 +15,7 @@ export class PlaylistComponent implements OnInit {
     
     constructor(private _playlistService: PlaylistService, private _form: FormBuilder, private _router: Router) { }
   
-    columnNames = ['PlaylistId', 'UserId', 'PlaylistName', 'SongList'];
+    columnNames = ['PlaylistId', 'PlaylistName', 'SongList', 'buttons'];
     
     ngOnInit() {
     this._playlistService.getPlaylist().subscribe((playlist: Playlist[]) => {
