@@ -12,11 +12,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./mood.component.css']
 })
 export class MoodComponent implements OnInit {
+  columnNames = ['MoodId', 'MoodName', 'buttons'];
   dataSource: MatTableDataSource<MoodDetail>;
     
     constructor(private _moodService: MoodService, private _form: FormBuilder, private _router: Router) { }
   
-    columnNames = ['MoodId', 'MoodName'];
+  
     
     ngOnInit() {
     this._moodService.getMoods().subscribe((mood: MoodDetail[]) => {
