@@ -27,9 +27,6 @@ this._ar.paramMap.subscribe(p => {
   });
 });  
 }
-
-
-
   ngOnInit() {
   }
 createForm() {
