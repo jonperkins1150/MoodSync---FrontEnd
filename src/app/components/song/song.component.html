@@ -1,8 +1,6 @@
 <h1>Songs</h1>
 <hr>
 <button mat-raised-button class="btn-create" routerLink="/song/song-create"><b>Create</b></button>
-<button mat-raised-button class="btn-edit" routerLink="/song/song-edit"><b>Edit</b></button>
-<button mat-raised-button class="btn-delete" routerLink="/song/song-delete"><b>Delete</b></button>
 <div> 
 <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
@@ -40,11 +38,11 @@
     <mat-cell *matCellDef="let song">{{song.ChildFriendly}}</mat-cell>
   </ng-container>
 
-<ng-container matColumnDef="buttons">
+  <ng-container matColumnDef="buttons">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let song">
-        <i mat-icon-class="material-icons" routerLink="/song-edit/{{song.SongId}}">Edit</i>
-        <i class="material-icons" routerLink="/song-delete/{{song.SongId}}">Delete</i>
+        <button mat-raised-button class="btn-edit" routerLink="/song/song-edit/{{song.SongId}}"><b>Edit</b></button>
+        <button mat-raised-button class="btn-delete" routerLink="/song/song-delete/{{song.SongId}}"><b>Delete</b></button>
     </mat-cell>
 </ng-container>
 

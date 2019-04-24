@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { SongService } from 'src/app/services/song.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { SongDetails } from 'src/app/models/SongDetails';
 
 @Component({
   selector: 'app-song-edit',
@@ -10,15 +11,26 @@ import { Router } from '@angular/router';
 })
 
 export class SongEditComponent implements OnInit {
+  
+  song: SongDetails;
+
   songForm: FormGroup;
 
-  constructor(private songService: SongService, private _form: FormBuilder, private _router: Router) { 
+  constructor(private _form: FormBuilder,
+              private songserv: SongService,
+              private _ar: ActivatedRoute,
+              private _router: Router) { 
+
+this._ar.paramMap.subscribe(p => {
+  this.songserv.getSong("id", p.get('id')).subscribe((singleSong: SongDetails) => {
+    this.song = singleSong;
     this.createForm();
-  }
+  });
+});  
+}
 
   ngOnInit() {
   }
-
   createForm(){
     this.songForm = this._form.group({
       SongName: new FormControl,
@@ -28,9 +40,16 @@ export class SongEditComponent implements OnInit {
       ChildFriendly: new FormControl
     });
   }
-  onSubmit(){
-    this.songService.updateSong(this.songForm.value).subscribe(data => {
-      this._router.navigate(['/song']);
-    });
-  }
+onSubmit(songForm) {
+  const updateSong: SongDetails = {
+    SongName: songForm.value.SongId,
+    Album: songForm.value.Album,
+    Artist: songForm.value.Artist,
+    GenreId: songForm.value.GenreId,
+    ChildFriendly: songForm.value.ChildFriendly  
+  };
+  this.songserv.updateSong(updateSong).subscribe(d => {
+    this._router.navigate(['/song']);
+  });
+}
 }
