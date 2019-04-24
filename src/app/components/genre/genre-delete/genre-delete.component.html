@@ -4,21 +4,16 @@
 <hr>
 <div *ngIf="genre">
   <div>
-    <label for="">GenreId</label>
-    <span>{{genre.GenreId}}</span>
-  </div>
-
-  <div>
     <label for="">GenreName</label>
-    <span>{{genre.GenreName}}</span>
+    <h3><span>{{genre.GenreName}}</span></h3>
   </div>
 
 </div>
 
 <div>
-<button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete Genre</b></button>
-</div>
-
-<div>
-<button mat-raised-button class="btn-existing" routerLink="/genre"><b>Back to Genre</b></button>
-</div>
+    <button mat-raised-button class="btn-delete" (click)="onDelete()"><b>Delete</b></button>
+  </div>
+  &nbsp;&nbsp;
+  <div>
+  <button mat-raised-button class="btn-existing" routerLink="/genre"><b>Back to Genre</b></button>
+  </div>
