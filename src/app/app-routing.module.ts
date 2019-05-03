@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminGuard } from './guards/admin.guard';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { DetailsComponent } from './components/details/details.component';
 import { GenreComponent } from './components/genre/genre.component';
 import { GenreCreateComponent } from './components/genre/genre-create/genre-create.component';
@@ -30,7 +32,9 @@ import { RegistrationComponent } from './components/registration/registration.co
 
 const routes: Routes = [
   { path: "", component: HomeLoggedComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'adminportal', canActivate: [AuthGuard] , component: AdminportalComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'details', component: DetailsComponent }, 
  
   {

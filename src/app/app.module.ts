@@ -16,11 +16,16 @@ import {
 import { MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AboutComponent } from './components/about/about.component';
 import { AppComponent } from './app.component';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { DetailsComponent } from './components/details/details.component';
 import { GenreComponent } from './components/genre/genre.component';
 import { GenreCreateComponent } from './components/genre/genre-create/genre-create.component';
+import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
+import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
+import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeLoggedComponent } from './components/home-logged/home-logged.component';
 import { HomeNotLoggedComponent } from './components/home-not-logged/home-not-logged.component';
@@ -32,24 +37,21 @@ import { MoodDetailComponent } from './components/mood/mood-detail/mood-detail.c
 import { MoodEditComponent } from './components/mood/mood-edit/mood-edit.component';
 import { PlaylistComponent } from './components/playlist/playlist.component';
 import { PlaylistCreateComponent } from './components/playlist/playlist-create/playlist-create.component';
+import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/playlist-delete.component';
+import { PlaylistDetailComponent } from './components/playlist/playlist-detail/playlist-detail.component';
+import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
 import { RegistrationComponent} from './components/registration/registration.component';
 import { SongComponent } from './components/song/song.component';
+import { SongCreateComponent } from './components/song/song-create/song-create.component';
+import { SongDeleteComponent } from './components/song/song-delete/song-delete.component';
+import { SongDetailsComponent } from './components/song/song-details/song-details.component';
+import { SongEditComponent } from './components/song/song-edit/song-edit.component';
 
 import { AuthService } from './services/auth.service';
 import { GenreService } from './services/genre.service';
 import { MoodService } from './services/mood.service';
 import { PlaylistService } from './services/playlist.service';
 import { SongService } from './services/song.service';
-import { PlaylistDetailComponent } from './components/playlist/playlist-detail/playlist-detail.component';
-import { PlaylistEditComponent } from './components/playlist/playlist-edit/playlist-edit.component';
-import { PlaylistDeleteComponent } from './components/playlist/playlist-delete/playlist-delete.component';
-import { GenreEditComponent } from './components/genre/genre-edit/genre-edit.component';
-import { GenreDetailComponent } from './components/genre/genre-details/genre-details.component';
-import { GenreDeleteComponent } from './components/genre/genre-delete/genre-delete.component';
-import { SongCreateComponent } from './components/song/song-create/song-create.component';
-import { SongEditComponent } from './components/song/song-edit/song-edit.component';
-import { SongDetailsComponent } from './components/song/song-details/song-details.component';
-import { SongDeleteComponent } from './components/song/song-delete/song-delete.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminGuard } from './guards/admin.guard';
 
@@ -63,11 +65,16 @@ const routes = [
 
 @NgModule({
   declarations: [
+    AboutComponent,
     AdminportalComponent,
     AppComponent,
+    ContactComponent,
     DetailsComponent,
     GenreComponent,
     GenreCreateComponent,
+    GenreDeleteComponent,
+    GenreDetailComponent,
+    GenreEditComponent,
     HeaderComponent,
     HomeLoggedComponent,
     HomeNotLoggedComponent,
@@ -79,19 +86,15 @@ const routes = [
     MoodEditComponent,
     PlaylistComponent,
     PlaylistCreateComponent,
-    RegistrationComponent,
-    SongComponent,
+    PlaylistDeleteComponent,
     PlaylistDetailComponent,
     PlaylistEditComponent,
-    PlaylistDeleteComponent,
-    GenreEditComponent,
-    GenreDetailComponent,
-    GenreDeleteComponent,
+    RegistrationComponent,
+    SongComponent,
     SongCreateComponent,
-    SongEditComponent,
-    SongDetailsComponent,
     SongDeleteComponent,
-
+    SongDetailsComponent,
+    SongEditComponent,
   ],
   imports: [
     AppRoutingModule,
