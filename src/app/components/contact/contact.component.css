@@ -1,0 +1,32 @@
+h1{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 3em;
+    color: 	#ff5000;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 2em;
+    color: #064b55;
+    text-align: center;
+}
+h3{
+    font-family: 'Nanum Gothic', cursive;
+    font-size: 2em;
+    color: #7f00b8;
+    text-align: center;
+}
+
+h4{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em;
+    color: #7f00b8;
+    text-align: center;
+}
+
+p{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em; 
+    color: black;   
+}
