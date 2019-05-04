@@ -21,12 +21,18 @@ h3{
 h4{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1em;
-    color: #7f00b8;
+    color: #064b55;
     text-align: center;
+}
+
+a{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em; 
+    color:  #7f00b8;;   
 }
 
 p{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1em; 
-    color: black;   
+    color:  #7f00b8;;   
 }
