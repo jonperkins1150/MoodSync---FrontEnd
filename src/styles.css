@@ -107,12 +107,6 @@ p{
     color:#7f00b8
 }
 
-p2{
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 1em; 
-    color: black;   
-}
-
 .bg-img{
     background-image: url("./assets/black-and-white-close-up-earphones-faded.jpg");
     background-size: cover;
