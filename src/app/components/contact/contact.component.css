@@ -1,6 +1,6 @@
 h1{
     font-family: 'Nanum Pen Script', cursive;
-    font-size: 3em;
+    font-size: 4em;
     color: 	#ff5000;
     text-align: center;
 }
@@ -10,6 +10,7 @@ h2{
     font-size: 2em;
     color: #064b55;
     text-align: center;
+    text-shadow: 1px 1px 1px 1px black;
 }
 h3{
     font-family: 'Nanum Gothic', cursive;
@@ -23,12 +24,23 @@ h4{
     font-size: 1em;
     color: #064b55;
     text-align: center;
+    text-shadow: .5px .5px .5px black;
 }
 
 a{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1em; 
-    color:  #7f00b8;;   
+    color:  #7f00b8;
+    text-shadow: .5px .5px .5px black;
+}
+
+.textbox{
+    background-color: rgba(255, 255, 255, .8);
+    border: 5px;
+    border-style: solid;
+    border-color: #493267;
+    margin-left: 15em;
+    margin-right: 15em;
 }
 
 p{

@@ -1,9 +1,17 @@
-p{
+.textbox{
+    background-color: rgba(255, 255, 255, .8);
+    border: 5px;
+    border-style: solid;
+    border-color: #493267;
+    margin-left: 10em;
+    margin-right: 10em;
+    padding: 2em 2em 2em 2em;
+}
+
+.textbox p{
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 1.3em; 
+    font-size: 1.2em; 
     color: #064b55;
     text-align: left;
-    margin-left: 15em;
-    margin-right: 15em;
     font-weight: bold;
 }
